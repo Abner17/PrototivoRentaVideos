@@ -81,7 +81,7 @@ namespace RentaVideos
 
         private void btRegVideo_Click(object sender, EventArgs e)
         {
-
+            //hola
         }
     }
 }
