@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace RentaVideos
+{
+    public partial class menuPrincipal : Form
+    {
+        public menuPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        public static class Util
+        {
+            public enum Effect {  Roll, Slide, Center, Blend}
+            public static void Animate(Control ctl, Effect effect, int msec, int angle)
+            {
+                int flags = effmap[(int)effect];
+
+                if (ctl.Visible)
+                {
+                    flags |= 0x10000; angle += 180;
+                }
+                else
+                {
+                    if (ctl.TopLevelControl == ctl) flags |= 0x20000;
+                    else if (effect == Effect.Blend) throw new ArgumentException();
+                }
+                flags |= dirmap[(angle % 360) / 45];
+                bool ok = AnimateWindow(ctl.Handle, msec, flags);
+                if (!ok) throw new Exception("Animation failed");
+                ctl.Visible = !ctl.Visible;
+            }
+
+            private static int[] dirmap = { 1, 5, 4, 6, 2, 10, 8, 9 };
+            private static int[] effmap = { 0, 0x40000, 0x10, 0x80000 };
+
+            [DllImport("user32.dll")]
+            private static extern bool AnimateWindow(IntPtr handle, int msec, int flags);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMenu_Click(object sender, EventArgs e)
+        {
+            Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+        }
+
+        private void btRegresar_Click(object sender, EventArgs e)
+        {
+            Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+            Util.Animate(menu, Util.Effect.Roll, 150, 360);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Util.Animate(registros, Util.Effect.Roll, 150, 360);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Util.Animate(registros, Util.Effect.Roll, 150, 360);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btRegVideo_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
