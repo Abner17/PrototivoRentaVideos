@@ -60,18 +60,34 @@ namespace RentaVideos
 
         private void btRegresar_Click(object sender, EventArgs e)
         {
-            Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
-            Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            if (busquedas.Visible == true)
+            {
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+                Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+                Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            }else if(registros.Visible == true){
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+                Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+                Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            }
+            else
+            {
+                Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+                Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Util.Animate(registros, Util.Effect.Roll, 150, 360);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Util.Animate(registros, Util.Effect.Roll, 150, 360);
+            if (busquedas.Visible == true)
+            {
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+            }
+            else
+            {
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -81,7 +97,40 @@ namespace RentaVideos
 
         private void btRegVideo_Click(object sender, EventArgs e)
         {
-            //hola
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (registros.Visible == true)
+            {
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+            }
+            else
+            {
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void busquedas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void registros_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
