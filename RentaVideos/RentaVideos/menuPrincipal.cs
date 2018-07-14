@@ -132,5 +132,10 @@ namespace RentaVideos
         {
 
         }
+
+        private void subMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

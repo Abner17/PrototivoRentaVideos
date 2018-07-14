@@ -195,5 +195,14 @@
   <ItemGroup>
     <None Include="Iconos\iconLinea.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
