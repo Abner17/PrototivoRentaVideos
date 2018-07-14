@@ -65,13 +65,16 @@ namespace RentaVideos
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
                 Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
                 Util.Animate(menu, Util.Effect.Roll, 150, 360);
-            }else if(registros.Visible == true){
+            }else if (registros.Visible == true){
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
                 Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
                 Util.Animate(menu, Util.Effect.Roll, 150, 360);
-            }
-            else
+            }else if (configuraciones.Visible == true)
             {
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+                Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
+                Util.Animate(menu, Util.Effect.Roll, 150, 360);
+            }else{
                 Util.Animate(subMenu, Util.Effect.Roll, 150, 360);
                 Util.Animate(menu, Util.Effect.Roll, 150, 360);
             }
@@ -83,8 +86,11 @@ namespace RentaVideos
             {
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
-            }
-            else
+            }else if(configuraciones.Visible == true)
+            {
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+            }else
             {
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
             }
@@ -111,8 +117,11 @@ namespace RentaVideos
             {
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
-            }
-            else
+            }else if(configuraciones.Visible == true)
+            {
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+            }else
             {
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
             }
@@ -136,6 +145,33 @@ namespace RentaVideos
         private void subMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configuraciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btConfiguracion_Click(object sender, EventArgs e)
+        {
+            if (registros.Visible == true)
+            {
+                Util.Animate(registros, Util.Effect.Roll, 150, 360);
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+            }
+            else if (busquedas.Visible == true)
+            {
+                Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+            }else
+            {
+                Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
+            }
         }
     }
 }
