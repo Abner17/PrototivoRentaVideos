@@ -33,6 +33,8 @@
             this.menu = new System.Windows.Forms.Panel();
             this.btMenu = new System.Windows.Forms.Button();
             this.subMenu = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.btRentar = new System.Windows.Forms.Button();
             this.btConfiguracion = new System.Windows.Forms.Button();
             this.btReportes = new System.Windows.Forms.Button();
@@ -67,6 +69,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.registroVideo = new System.Windows.Forms.Panel();
+            this.button62 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button27 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -79,7 +82,6 @@
             this.button24 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button23 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -94,53 +96,6 @@
             this.button15 = new System.Windows.Forms.Button();
             this.registroProveedor = new System.Windows.Forms.Panel();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.registroClientes = new System.Windows.Forms.Panel();
-            this.registroEmpleados = new System.Windows.Forms.Panel();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.button60 = new System.Windows.Forms.Button();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.button61 = new System.Windows.Forms.Button();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button47 = new System.Windows.Forms.Button();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.button51 = new System.Windows.Forms.Button();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.button56 = new System.Windows.Forms.Button();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.button57 = new System.Windows.Forms.Button();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.button58 = new System.Windows.Forms.Button();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.button59 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button43 = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.button44 = new System.Windows.Forms.Button();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.button50 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.button52 = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.button53 = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button33 = new System.Windows.Forms.Button();
@@ -169,8 +124,58 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.button38 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.label9 = new System.Windows.Forms.Label();
+            this.registroClientes = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button43 = new System.Windows.Forms.Button();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.button44 = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.button46 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.button49 = new System.Windows.Forms.Button();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.button50 = new System.Windows.Forms.Button();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.button52 = new System.Windows.Forms.Button();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.button53 = new System.Windows.Forms.Button();
+            this.registroEmpleados = new System.Windows.Forms.Panel();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.button60 = new System.Windows.Forms.Button();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.button61 = new System.Windows.Forms.Button();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button47 = new System.Windows.Forms.Button();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.button51 = new System.Windows.Forms.Button();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.button54 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.button56 = new System.Windows.Forms.Button();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.button57 = new System.Windows.Forms.Button();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.button58 = new System.Windows.Forms.Button();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
+            this.button67 = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.registros.SuspendLayout();
@@ -178,11 +183,10 @@
             this.busquedas.SuspendLayout();
             this.configuraciones.SuspendLayout();
             this.registroVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.registroProveedor.SuspendLayout();
             this.registroClientes.SuspendLayout();
-            this.registroEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.registroEmpleados.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -209,6 +213,7 @@
             // subMenu
             // 
             this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.subMenu.Controls.Add(this.button67);
             this.subMenu.Controls.Add(this.label9);
             this.subMenu.Controls.Add(this.btRentar);
             this.subMenu.Controls.Add(this.btConfiguracion);
@@ -223,6 +228,21 @@
             this.subMenu.TabIndex = 1;
             this.subMenu.Visible = false;
             this.subMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.subMenu_Paint);
+            // 
+            // label9
+            // 
+            this.label9.ImageIndex = 0;
+            this.label9.ImageList = this.imageList2;
+            this.label9.Location = new System.Drawing.Point(74, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(161, 158);
+            this.label9.TabIndex = 7;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "logoBlanco.png");
             // 
             // btRentar
             // 
@@ -276,6 +296,7 @@
             this.btReportes.Text = "REPORTES";
             this.btReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btReportes.UseVisualStyleBackColor = true;
+            this.btReportes.Click += new System.EventHandler(this.btReportes_Click);
             // 
             // btCotizacion
             // 
@@ -748,6 +769,8 @@
             // 
             // registroVideo
             // 
+            this.registroVideo.Controls.Add(this.button66);
+            this.registroVideo.Controls.Add(this.button62);
             this.registroVideo.Controls.Add(this.label5);
             this.registroVideo.Controls.Add(this.button27);
             this.registroVideo.Controls.Add(this.textBox3);
@@ -760,7 +783,6 @@
             this.registroVideo.Controls.Add(this.button24);
             this.registroVideo.Controls.Add(this.textBox9);
             this.registroVideo.Controls.Add(this.button23);
-            this.registroVideo.Controls.Add(this.pictureBox1);
             this.registroVideo.Controls.Add(this.button22);
             this.registroVideo.Controls.Add(this.button21);
             this.registroVideo.Controls.Add(this.button20);
@@ -779,6 +801,21 @@
             this.registroVideo.TabIndex = 11;
             this.registroVideo.Visible = false;
             this.registroVideo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button62
+            // 
+            this.button62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button62.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button62.FlatAppearance.BorderSize = 0;
+            this.button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button62.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button62.ForeColor = System.Drawing.Color.White;
+            this.button62.Location = new System.Drawing.Point(395, 95);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(182, 201);
+            this.button62.TabIndex = 35;
+            this.button62.Text = "Agregar Foto de Portada";
+            this.button62.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -910,16 +947,6 @@
             this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button23.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(358, 59);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 204);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // button22
             // 
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -946,7 +973,7 @@
             this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button21.Location = new System.Drawing.Point(18, 551);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(296, 43);
+            this.button21.Size = new System.Drawing.Size(100, 43);
             this.button21.TabIndex = 19;
             this.button21.Text = "Notas:";
             this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1079,8 +1106,8 @@
             // 
             // registroProveedor
             // 
+            this.registroProveedor.Controls.Add(this.button65);
             this.registroProveedor.Controls.Add(this.textBox14);
-            this.registroProveedor.Controls.Add(this.registroClientes);
             this.registroProveedor.Controls.Add(this.textBox15);
             this.registroProveedor.Controls.Add(this.textBox13);
             this.registroProveedor.Controls.Add(this.button33);
@@ -1121,600 +1148,6 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(152, 20);
             this.textBox14.TabIndex = 40;
-            // 
-            // registroClientes
-            // 
-            this.registroClientes.Controls.Add(this.registroEmpleados);
-            this.registroClientes.Controls.Add(this.pictureBox2);
-            this.registroClientes.Controls.Add(this.comboBox5);
-            this.registroClientes.Controls.Add(this.textBox16);
-            this.registroClientes.Controls.Add(this.textBox17);
-            this.registroClientes.Controls.Add(this.button41);
-            this.registroClientes.Controls.Add(this.button42);
-            this.registroClientes.Controls.Add(this.label7);
-            this.registroClientes.Controls.Add(this.button43);
-            this.registroClientes.Controls.Add(this.textBox19);
-            this.registroClientes.Controls.Add(this.button44);
-            this.registroClientes.Controls.Add(this.richTextBox3);
-            this.registroClientes.Controls.Add(this.button46);
-            this.registroClientes.Controls.Add(this.button48);
-            this.registroClientes.Controls.Add(this.textBox21);
-            this.registroClientes.Controls.Add(this.button49);
-            this.registroClientes.Controls.Add(this.textBox22);
-            this.registroClientes.Controls.Add(this.button50);
-            this.registroClientes.Controls.Add(this.textBox23);
-            this.registroClientes.Controls.Add(this.button52);
-            this.registroClientes.Controls.Add(this.textBox24);
-            this.registroClientes.Controls.Add(this.button53);
-            this.registroClientes.Location = new System.Drawing.Point(33, 35);
-            this.registroClientes.Name = "registroClientes";
-            this.registroClientes.Size = new System.Drawing.Size(725, 575);
-            this.registroClientes.TabIndex = 42;
-            this.registroClientes.Visible = false;
-            this.registroClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.registroClientes_Paint_1);
-            // 
-            // registroEmpleados
-            // 
-            this.registroEmpleados.Controls.Add(this.textBox30);
-            this.registroEmpleados.Controls.Add(this.button60);
-            this.registroEmpleados.Controls.Add(this.textBox31);
-            this.registroEmpleados.Controls.Add(this.button61);
-            this.registroEmpleados.Controls.Add(this.comboBox9);
-            this.registroEmpleados.Controls.Add(this.textBox18);
-            this.registroEmpleados.Controls.Add(this.textBox20);
-            this.registroEmpleados.Controls.Add(this.button1);
-            this.registroEmpleados.Controls.Add(this.button45);
-            this.registroEmpleados.Controls.Add(this.label8);
-            this.registroEmpleados.Controls.Add(this.button47);
-            this.registroEmpleados.Controls.Add(this.textBox25);
-            this.registroEmpleados.Controls.Add(this.button51);
-            this.registroEmpleados.Controls.Add(this.richTextBox4);
-            this.registroEmpleados.Controls.Add(this.button54);
-            this.registroEmpleados.Controls.Add(this.button55);
-            this.registroEmpleados.Controls.Add(this.textBox26);
-            this.registroEmpleados.Controls.Add(this.button56);
-            this.registroEmpleados.Controls.Add(this.textBox27);
-            this.registroEmpleados.Controls.Add(this.button57);
-            this.registroEmpleados.Controls.Add(this.textBox28);
-            this.registroEmpleados.Controls.Add(this.button58);
-            this.registroEmpleados.Controls.Add(this.textBox29);
-            this.registroEmpleados.Controls.Add(this.button59);
-            this.registroEmpleados.Location = new System.Drawing.Point(41, 61);
-            this.registroEmpleados.Name = "registroEmpleados";
-            this.registroEmpleados.Size = new System.Drawing.Size(625, 532);
-            this.registroEmpleados.TabIndex = 43;
-            this.registroEmpleados.Visible = false;
-            this.registroEmpleados.Paint += new System.Windows.Forms.PaintEventHandler(this.registroEmpleados_Paint);
-            // 
-            // textBox30
-            // 
-            this.textBox30.Location = new System.Drawing.Point(451, 145);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(155, 20);
-            this.textBox30.TabIndex = 45;
-            // 
-            // button60
-            // 
-            this.button60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button60.FlatAppearance.BorderSize = 0;
-            this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button60.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button60.ForeColor = System.Drawing.Color.White;
-            this.button60.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button60.Location = new System.Drawing.Point(308, 134);
-            this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(158, 43);
-            this.button60.TabIndex = 44;
-            this.button60.Text = "Contraseña:";
-            this.button60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button60.UseVisualStyleBackColor = true;
-            // 
-            // textBox31
-            // 
-            this.textBox31.Location = new System.Drawing.Point(448, 98);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(155, 20);
-            this.textBox31.TabIndex = 43;
-            // 
-            // button61
-            // 
-            this.button61.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button61.FlatAppearance.BorderSize = 0;
-            this.button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button61.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button61.ForeColor = System.Drawing.Color.White;
-            this.button61.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button61.Location = new System.Drawing.Point(308, 83);
-            this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(113, 43);
-            this.button61.TabIndex = 42;
-            this.button61.Text = "Usuario:";
-            this.button61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button61.UseVisualStyleBackColor = true;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(189, 425);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(188, 21);
-            this.comboBox9.TabIndex = 41;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(126, 376);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(160, 20);
-            this.textBox18.TabIndex = 40;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(126, 332);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(160, 20);
-            this.textBox20.TabIndex = 39;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(7, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 43);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "E-mail 2:";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button45
-            // 
-            this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button45.FlatAppearance.BorderSize = 0;
-            this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button45.ForeColor = System.Drawing.Color.White;
-            this.button45.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button45.Location = new System.Drawing.Point(7, 317);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(113, 43);
-            this.button45.TabIndex = 35;
-            this.button45.Text = "E-mail:";
-            this.button45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button45.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(9, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(275, 31);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Regístro de empleado";
-            // 
-            // button47
-            // 
-            this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button47.FlatAppearance.BorderSize = 0;
-            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button47.ForeColor = System.Drawing.Color.White;
-            this.button47.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button47.Location = new System.Drawing.Point(426, 494);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(171, 93);
-            this.button47.TabIndex = 33;
-            this.button47.Text = "Agregar Cliente";
-            this.button47.UseVisualStyleBackColor = false;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(131, 283);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(155, 20);
-            this.textBox25.TabIndex = 32;
-            // 
-            // button51
-            // 
-            this.button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button51.FlatAppearance.BorderSize = 0;
-            this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button51.Location = new System.Drawing.Point(5, 268);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(113, 43);
-            this.button51.TabIndex = 31;
-            this.button51.Text = "Celular:";
-            this.button51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button51.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(133, 473);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(244, 102);
-            this.richTextBox4.TabIndex = 29;
-            this.richTextBox4.Text = "";
-            // 
-            // button54
-            // 
-            this.button54.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button54.FlatAppearance.BorderSize = 0;
-            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button54.ForeColor = System.Drawing.Color.White;
-            this.button54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button54.Location = new System.Drawing.Point(7, 410);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(191, 43);
-            this.button54.TabIndex = 22;
-            this.button54.Text = "Tipo de usuario:";
-            this.button54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button54.UseVisualStyleBackColor = true;
-            // 
-            // button55
-            // 
-            this.button55.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button55.FlatAppearance.BorderSize = 0;
-            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button55.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button55.ForeColor = System.Drawing.Color.White;
-            this.button55.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button55.Location = new System.Drawing.Point(7, 473);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(296, 43);
-            this.button55.TabIndex = 19;
-            this.button55.Text = "Notas:";
-            this.button55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button55.UseVisualStyleBackColor = true;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(131, 237);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(153, 20);
-            this.textBox26.TabIndex = 16;
-            // 
-            // button56
-            // 
-            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button56.FlatAppearance.BorderSize = 0;
-            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button56.ForeColor = System.Drawing.Color.White;
-            this.button56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button56.Location = new System.Drawing.Point(5, 222);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(120, 43);
-            this.button56.TabIndex = 15;
-            this.button56.Text = "Teléfono:";
-            this.button56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button56.UseVisualStyleBackColor = true;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(131, 188);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(153, 20);
-            this.textBox27.TabIndex = 14;
-            // 
-            // button57
-            // 
-            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button57.FlatAppearance.BorderSize = 0;
-            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button57.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button57.ForeColor = System.Drawing.Color.White;
-            this.button57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button57.Location = new System.Drawing.Point(5, 173);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(135, 43);
-            this.button57.TabIndex = 13;
-            this.button57.Text = "Dirección: ";
-            this.button57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button57.UseVisualStyleBackColor = true;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(131, 143);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(155, 20);
-            this.textBox28.TabIndex = 10;
-            // 
-            // button58
-            // 
-            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button58.FlatAppearance.BorderSize = 0;
-            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button58.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button58.ForeColor = System.Drawing.Color.White;
-            this.button58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button58.Location = new System.Drawing.Point(5, 128);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(113, 43);
-            this.button58.TabIndex = 9;
-            this.button58.Text = "Nombre: ";
-            this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button58.UseVisualStyleBackColor = true;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(131, 99);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(155, 20);
-            this.textBox29.TabIndex = 8;
-            // 
-            // button59
-            // 
-            this.button59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button59.FlatAppearance.BorderSize = 0;
-            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button59.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button59.ForeColor = System.Drawing.Color.White;
-            this.button59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button59.Location = new System.Drawing.Point(5, 84);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(113, 43);
-            this.button59.TabIndex = 7;
-            this.button59.Text = "Nit:";
-            this.button59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button59.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(434, 96);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 149);
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(202, 425);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(188, 21);
-            this.comboBox5.TabIndex = 41;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(139, 376);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(160, 20);
-            this.textBox16.TabIndex = 40;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(139, 332);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(160, 20);
-            this.textBox17.TabIndex = 39;
-            // 
-            // button41
-            // 
-            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button41.FlatAppearance.BorderSize = 0;
-            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.ForeColor = System.Drawing.Color.White;
-            this.button41.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button41.Location = new System.Drawing.Point(20, 366);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(113, 43);
-            this.button41.TabIndex = 36;
-            this.button41.Text = "E-mail 2:";
-            this.button41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button41.UseVisualStyleBackColor = true;
-            // 
-            // button42
-            // 
-            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button42.FlatAppearance.BorderSize = 0;
-            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.ForeColor = System.Drawing.Color.White;
-            this.button42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button42.Location = new System.Drawing.Point(20, 317);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(113, 43);
-            this.button42.TabIndex = 35;
-            this.button42.Text = "E-mail:";
-            this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button42.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(254, 31);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Regístro de Clientes";
-            // 
-            // button43
-            // 
-            this.button43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button43.FlatAppearance.BorderSize = 0;
-            this.button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button43.ForeColor = System.Drawing.Color.White;
-            this.button43.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button43.Location = new System.Drawing.Point(426, 494);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(171, 93);
-            this.button43.TabIndex = 33;
-            this.button43.Text = "Agregar Cliente";
-            this.button43.UseVisualStyleBackColor = false;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(144, 283);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(155, 20);
-            this.textBox19.TabIndex = 32;
-            // 
-            // button44
-            // 
-            this.button44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button44.FlatAppearance.BorderSize = 0;
-            this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.ForeColor = System.Drawing.Color.White;
-            this.button44.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button44.Location = new System.Drawing.Point(18, 268);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(113, 43);
-            this.button44.TabIndex = 31;
-            this.button44.Text = "Celular:";
-            this.button44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button44.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(146, 473);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(244, 102);
-            this.richTextBox3.TabIndex = 29;
-            this.richTextBox3.Text = "";
-            // 
-            // button46
-            // 
-            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button46.FlatAppearance.BorderSize = 0;
-            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.ForeColor = System.Drawing.Color.White;
-            this.button46.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button46.Location = new System.Drawing.Point(20, 410);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(191, 43);
-            this.button46.TabIndex = 22;
-            this.button46.Text = "Tipo de cliente:";
-            this.button46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button46.UseVisualStyleBackColor = true;
-            // 
-            // button48
-            // 
-            this.button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button48.FlatAppearance.BorderSize = 0;
-            this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button48.ForeColor = System.Drawing.Color.White;
-            this.button48.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button48.Location = new System.Drawing.Point(20, 473);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(296, 43);
-            this.button48.TabIndex = 19;
-            this.button48.Text = "Notas:";
-            this.button48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button48.UseVisualStyleBackColor = true;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(144, 237);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(153, 20);
-            this.textBox21.TabIndex = 16;
-            // 
-            // button49
-            // 
-            this.button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button49.FlatAppearance.BorderSize = 0;
-            this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button49.ForeColor = System.Drawing.Color.White;
-            this.button49.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button49.Location = new System.Drawing.Point(18, 222);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(120, 43);
-            this.button49.TabIndex = 15;
-            this.button49.Text = "Teléfono:";
-            this.button49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button49.UseVisualStyleBackColor = true;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(144, 188);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(153, 20);
-            this.textBox22.TabIndex = 14;
-            // 
-            // button50
-            // 
-            this.button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button50.FlatAppearance.BorderSize = 0;
-            this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button50.ForeColor = System.Drawing.Color.White;
-            this.button50.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button50.Location = new System.Drawing.Point(18, 173);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(135, 43);
-            this.button50.TabIndex = 13;
-            this.button50.Text = "Dirección: ";
-            this.button50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button50.UseVisualStyleBackColor = true;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(144, 143);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(155, 20);
-            this.textBox23.TabIndex = 10;
-            // 
-            // button52
-            // 
-            this.button52.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button52.FlatAppearance.BorderSize = 0;
-            this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button52.ForeColor = System.Drawing.Color.White;
-            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button52.Location = new System.Drawing.Point(18, 128);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(113, 43);
-            this.button52.TabIndex = 9;
-            this.button52.Text = "Nombre: ";
-            this.button52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button52.UseVisualStyleBackColor = true;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(144, 99);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(155, 20);
-            this.textBox24.TabIndex = 8;
-            // 
-            // button53
-            // 
-            this.button53.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button53.FlatAppearance.BorderSize = 0;
-            this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button53.ForeColor = System.Drawing.Color.White;
-            this.button53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button53.Location = new System.Drawing.Point(18, 84);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(113, 43);
-            this.button53.TabIndex = 7;
-            this.button53.Text = "Nit:";
-            this.button53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button53.UseVisualStyleBackColor = true;
             // 
             // textBox15
             // 
@@ -1926,7 +1359,7 @@
             this.button32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button32.Location = new System.Drawing.Point(18, 532);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(296, 43);
+            this.button32.Size = new System.Drawing.Size(109, 43);
             this.button32.TabIndex = 19;
             this.button32.Text = "Notas:";
             this.button32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2045,20 +1478,663 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // imageList2
+            // registroClientes
             // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "logoBlanco.png");
+            this.registroClientes.Controls.Add(this.button63);
+            this.registroClientes.Controls.Add(this.pictureBox2);
+            this.registroClientes.Controls.Add(this.comboBox5);
+            this.registroClientes.Controls.Add(this.textBox16);
+            this.registroClientes.Controls.Add(this.textBox17);
+            this.registroClientes.Controls.Add(this.button41);
+            this.registroClientes.Controls.Add(this.button42);
+            this.registroClientes.Controls.Add(this.label7);
+            this.registroClientes.Controls.Add(this.button43);
+            this.registroClientes.Controls.Add(this.textBox19);
+            this.registroClientes.Controls.Add(this.button44);
+            this.registroClientes.Controls.Add(this.richTextBox3);
+            this.registroClientes.Controls.Add(this.button46);
+            this.registroClientes.Controls.Add(this.button48);
+            this.registroClientes.Controls.Add(this.textBox21);
+            this.registroClientes.Controls.Add(this.button49);
+            this.registroClientes.Controls.Add(this.textBox22);
+            this.registroClientes.Controls.Add(this.button50);
+            this.registroClientes.Controls.Add(this.textBox23);
+            this.registroClientes.Controls.Add(this.button52);
+            this.registroClientes.Controls.Add(this.textBox24);
+            this.registroClientes.Controls.Add(this.button53);
+            this.registroClientes.Location = new System.Drawing.Point(288, 3);
+            this.registroClientes.Name = "registroClientes";
+            this.registroClientes.Size = new System.Drawing.Size(615, 604);
+            this.registroClientes.TabIndex = 43;
+            this.registroClientes.Visible = false;
             // 
-            // label9
+            // pictureBox2
             // 
-            this.label9.ImageIndex = 0;
-            this.label9.ImageList = this.imageList2;
-            this.label9.Location = new System.Drawing.Point(74, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(161, 158);
-            this.label9.TabIndex = 7;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(434, 96);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 149);
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(202, 425);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(188, 21);
+            this.comboBox5.TabIndex = 41;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(139, 376);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(160, 20);
+            this.textBox16.TabIndex = 40;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(139, 332);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(160, 20);
+            this.textBox17.TabIndex = 39;
+            // 
+            // button41
+            // 
+            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button41.FlatAppearance.BorderSize = 0;
+            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button41.ForeColor = System.Drawing.Color.White;
+            this.button41.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button41.Location = new System.Drawing.Point(20, 366);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(113, 43);
+            this.button41.TabIndex = 36;
+            this.button41.Text = "E-mail 2:";
+            this.button41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button41.UseVisualStyleBackColor = true;
+            // 
+            // button42
+            // 
+            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button42.FlatAppearance.BorderSize = 0;
+            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button42.ForeColor = System.Drawing.Color.White;
+            this.button42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button42.Location = new System.Drawing.Point(20, 317);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(113, 43);
+            this.button42.TabIndex = 35;
+            this.button42.Text = "E-mail:";
+            this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button42.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(9, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(254, 31);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Regístro de Clientes";
+            // 
+            // button43
+            // 
+            this.button43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button43.FlatAppearance.BorderSize = 0;
+            this.button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button43.ForeColor = System.Drawing.Color.White;
+            this.button43.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button43.Location = new System.Drawing.Point(426, 494);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(171, 93);
+            this.button43.TabIndex = 33;
+            this.button43.Text = "Agregar Cliente";
+            this.button43.UseVisualStyleBackColor = false;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(144, 283);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(155, 20);
+            this.textBox19.TabIndex = 32;
+            // 
+            // button44
+            // 
+            this.button44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button44.FlatAppearance.BorderSize = 0;
+            this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button44.ForeColor = System.Drawing.Color.White;
+            this.button44.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button44.Location = new System.Drawing.Point(18, 268);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(113, 43);
+            this.button44.TabIndex = 31;
+            this.button44.Text = "Celular:";
+            this.button44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button44.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(146, 473);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(244, 102);
+            this.richTextBox3.TabIndex = 29;
+            this.richTextBox3.Text = "";
+            // 
+            // button46
+            // 
+            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button46.FlatAppearance.BorderSize = 0;
+            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button46.ForeColor = System.Drawing.Color.White;
+            this.button46.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button46.Location = new System.Drawing.Point(20, 410);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(191, 43);
+            this.button46.TabIndex = 22;
+            this.button46.Text = "Tipo de cliente:";
+            this.button46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button46.UseVisualStyleBackColor = true;
+            // 
+            // button48
+            // 
+            this.button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button48.FlatAppearance.BorderSize = 0;
+            this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button48.ForeColor = System.Drawing.Color.White;
+            this.button48.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button48.Location = new System.Drawing.Point(20, 473);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(113, 43);
+            this.button48.TabIndex = 19;
+            this.button48.Text = "Notas:";
+            this.button48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button48.UseVisualStyleBackColor = true;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(144, 237);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(153, 20);
+            this.textBox21.TabIndex = 16;
+            // 
+            // button49
+            // 
+            this.button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button49.FlatAppearance.BorderSize = 0;
+            this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button49.ForeColor = System.Drawing.Color.White;
+            this.button49.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button49.Location = new System.Drawing.Point(18, 222);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(120, 43);
+            this.button49.TabIndex = 15;
+            this.button49.Text = "Teléfono:";
+            this.button49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button49.UseVisualStyleBackColor = true;
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(144, 188);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(153, 20);
+            this.textBox22.TabIndex = 14;
+            // 
+            // button50
+            // 
+            this.button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button50.FlatAppearance.BorderSize = 0;
+            this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button50.ForeColor = System.Drawing.Color.White;
+            this.button50.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button50.Location = new System.Drawing.Point(18, 173);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(135, 43);
+            this.button50.TabIndex = 13;
+            this.button50.Text = "Dirección: ";
+            this.button50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button50.UseVisualStyleBackColor = true;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(144, 143);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(155, 20);
+            this.textBox23.TabIndex = 10;
+            // 
+            // button52
+            // 
+            this.button52.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button52.FlatAppearance.BorderSize = 0;
+            this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button52.ForeColor = System.Drawing.Color.White;
+            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button52.Location = new System.Drawing.Point(18, 128);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(113, 43);
+            this.button52.TabIndex = 9;
+            this.button52.Text = "Nombre: ";
+            this.button52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button52.UseVisualStyleBackColor = true;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(144, 99);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(155, 20);
+            this.textBox24.TabIndex = 8;
+            // 
+            // button53
+            // 
+            this.button53.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button53.FlatAppearance.BorderSize = 0;
+            this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button53.ForeColor = System.Drawing.Color.White;
+            this.button53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button53.Location = new System.Drawing.Point(18, 84);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(113, 43);
+            this.button53.TabIndex = 7;
+            this.button53.Text = "Nit:";
+            this.button53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button53.UseVisualStyleBackColor = true;
+            // 
+            // registroEmpleados
+            // 
+            this.registroEmpleados.Controls.Add(this.button64);
+            this.registroEmpleados.Controls.Add(this.textBox30);
+            this.registroEmpleados.Controls.Add(this.button60);
+            this.registroEmpleados.Controls.Add(this.textBox31);
+            this.registroEmpleados.Controls.Add(this.button61);
+            this.registroEmpleados.Controls.Add(this.comboBox9);
+            this.registroEmpleados.Controls.Add(this.textBox18);
+            this.registroEmpleados.Controls.Add(this.textBox20);
+            this.registroEmpleados.Controls.Add(this.button1);
+            this.registroEmpleados.Controls.Add(this.button45);
+            this.registroEmpleados.Controls.Add(this.label8);
+            this.registroEmpleados.Controls.Add(this.button47);
+            this.registroEmpleados.Controls.Add(this.textBox25);
+            this.registroEmpleados.Controls.Add(this.button51);
+            this.registroEmpleados.Controls.Add(this.richTextBox4);
+            this.registroEmpleados.Controls.Add(this.button54);
+            this.registroEmpleados.Controls.Add(this.button55);
+            this.registroEmpleados.Controls.Add(this.textBox26);
+            this.registroEmpleados.Controls.Add(this.button56);
+            this.registroEmpleados.Controls.Add(this.textBox27);
+            this.registroEmpleados.Controls.Add(this.button57);
+            this.registroEmpleados.Controls.Add(this.textBox28);
+            this.registroEmpleados.Controls.Add(this.button58);
+            this.registroEmpleados.Controls.Add(this.textBox29);
+            this.registroEmpleados.Controls.Add(this.button59);
+            this.registroEmpleados.Location = new System.Drawing.Point(288, 0);
+            this.registroEmpleados.Name = "registroEmpleados";
+            this.registroEmpleados.Size = new System.Drawing.Size(615, 604);
+            this.registroEmpleados.TabIndex = 44;
+            this.registroEmpleados.Visible = false;
+            // 
+            // textBox30
+            // 
+            this.textBox30.Location = new System.Drawing.Point(451, 145);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(155, 20);
+            this.textBox30.TabIndex = 45;
+            // 
+            // button60
+            // 
+            this.button60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button60.FlatAppearance.BorderSize = 0;
+            this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button60.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button60.ForeColor = System.Drawing.Color.White;
+            this.button60.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button60.Location = new System.Drawing.Point(308, 134);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(158, 43);
+            this.button60.TabIndex = 44;
+            this.button60.Text = "Contraseña:";
+            this.button60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button60.UseVisualStyleBackColor = true;
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(448, 98);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(155, 20);
+            this.textBox31.TabIndex = 43;
+            // 
+            // button61
+            // 
+            this.button61.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button61.FlatAppearance.BorderSize = 0;
+            this.button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button61.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button61.ForeColor = System.Drawing.Color.White;
+            this.button61.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button61.Location = new System.Drawing.Point(308, 83);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(113, 43);
+            this.button61.TabIndex = 42;
+            this.button61.Text = "Usuario:";
+            this.button61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button61.UseVisualStyleBackColor = true;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(189, 425);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(188, 21);
+            this.comboBox9.TabIndex = 41;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(126, 376);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(160, 20);
+            this.textBox18.TabIndex = 40;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(126, 332);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(160, 20);
+            this.textBox20.TabIndex = 39;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(7, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 43);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "E-mail 2:";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button45
+            // 
+            this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button45.FlatAppearance.BorderSize = 0;
+            this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button45.ForeColor = System.Drawing.Color.White;
+            this.button45.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button45.Location = new System.Drawing.Point(7, 317);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(113, 43);
+            this.button45.TabIndex = 35;
+            this.button45.Text = "E-mail:";
+            this.button45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button45.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(9, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(277, 31);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Regístro de Empleado";
+            // 
+            // button47
+            // 
+            this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button47.FlatAppearance.BorderSize = 0;
+            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button47.ForeColor = System.Drawing.Color.White;
+            this.button47.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button47.Location = new System.Drawing.Point(426, 494);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(171, 93);
+            this.button47.TabIndex = 33;
+            this.button47.Text = "Agregar Empleado";
+            this.button47.UseVisualStyleBackColor = false;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(131, 283);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(155, 20);
+            this.textBox25.TabIndex = 32;
+            // 
+            // button51
+            // 
+            this.button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button51.FlatAppearance.BorderSize = 0;
+            this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button51.ForeColor = System.Drawing.Color.White;
+            this.button51.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button51.Location = new System.Drawing.Point(5, 268);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(113, 43);
+            this.button51.TabIndex = 31;
+            this.button51.Text = "Celular:";
+            this.button51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button51.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(133, 473);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(244, 102);
+            this.richTextBox4.TabIndex = 29;
+            this.richTextBox4.Text = "";
+            // 
+            // button54
+            // 
+            this.button54.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button54.FlatAppearance.BorderSize = 0;
+            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button54.ForeColor = System.Drawing.Color.White;
+            this.button54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button54.Location = new System.Drawing.Point(7, 410);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(191, 43);
+            this.button54.TabIndex = 22;
+            this.button54.Text = "Tipo de usuario:";
+            this.button54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button54.UseVisualStyleBackColor = true;
+            // 
+            // button55
+            // 
+            this.button55.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button55.FlatAppearance.BorderSize = 0;
+            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button55.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button55.ForeColor = System.Drawing.Color.White;
+            this.button55.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button55.Location = new System.Drawing.Point(7, 473);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(118, 43);
+            this.button55.TabIndex = 19;
+            this.button55.Text = "Notas:";
+            this.button55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button55.UseVisualStyleBackColor = true;
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(131, 237);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(153, 20);
+            this.textBox26.TabIndex = 16;
+            // 
+            // button56
+            // 
+            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button56.FlatAppearance.BorderSize = 0;
+            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button56.ForeColor = System.Drawing.Color.White;
+            this.button56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button56.Location = new System.Drawing.Point(5, 222);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(120, 43);
+            this.button56.TabIndex = 15;
+            this.button56.Text = "Teléfono:";
+            this.button56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button56.UseVisualStyleBackColor = true;
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(131, 188);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(153, 20);
+            this.textBox27.TabIndex = 14;
+            // 
+            // button57
+            // 
+            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button57.FlatAppearance.BorderSize = 0;
+            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button57.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button57.ForeColor = System.Drawing.Color.White;
+            this.button57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button57.Location = new System.Drawing.Point(5, 173);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(135, 43);
+            this.button57.TabIndex = 13;
+            this.button57.Text = "Dirección: ";
+            this.button57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button57.UseVisualStyleBackColor = true;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(131, 143);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(155, 20);
+            this.textBox28.TabIndex = 10;
+            // 
+            // button58
+            // 
+            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button58.FlatAppearance.BorderSize = 0;
+            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button58.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button58.ForeColor = System.Drawing.Color.White;
+            this.button58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button58.Location = new System.Drawing.Point(5, 128);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(113, 43);
+            this.button58.TabIndex = 9;
+            this.button58.Text = "Nombre: ";
+            this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button58.UseVisualStyleBackColor = true;
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(131, 99);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(155, 20);
+            this.textBox29.TabIndex = 8;
+            // 
+            // button59
+            // 
+            this.button59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button59.FlatAppearance.BorderSize = 0;
+            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button59.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.ForeColor = System.Drawing.Color.White;
+            this.button59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button59.Location = new System.Drawing.Point(5, 84);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(113, 43);
+            this.button59.TabIndex = 7;
+            this.button59.Text = "Nit:";
+            this.button59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button59.UseVisualStyleBackColor = true;
+            // 
+            // button64
+            // 
+            this.button64.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.button64.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button64.FlatAppearance.BorderSize = 0;
+            this.button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button64.Location = new System.Drawing.Point(512, 12);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(31, 34);
+            this.button64.TabIndex = 46;
+            this.button64.UseVisualStyleBackColor = true;
+            this.button64.Click += new System.EventHandler(this.button64_Click_2);
+            // 
+            // button63
+            // 
+            this.button63.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.button63.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button63.FlatAppearance.BorderSize = 0;
+            this.button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button63.Location = new System.Drawing.Point(512, 12);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(31, 34);
+            this.button63.TabIndex = 48;
+            this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button63_Click);
+            // 
+            // button65
+            // 
+            this.button65.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.button65.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button65.FlatAppearance.BorderSize = 0;
+            this.button65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button65.Location = new System.Drawing.Point(512, 12);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(31, 34);
+            this.button65.TabIndex = 49;
+            this.button65.UseVisualStyleBackColor = true;
+            this.button65.Click += new System.EventHandler(this.button65_Click);
+            // 
+            // button66
+            // 
+            this.button66.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button66.FlatAppearance.BorderSize = 0;
+            this.button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button66.Location = new System.Drawing.Point(512, 12);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(31, 34);
+            this.button66.TabIndex = 50;
+            this.button66.UseVisualStyleBackColor = true;
+            this.button66.Click += new System.EventHandler(this.button66_Click);
+            // 
+            // button67
+            // 
+            this.button67.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button67.BackgroundImage")));
+            this.button67.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button67.FlatAppearance.BorderSize = 0;
+            this.button67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button67.Location = new System.Drawing.Point(6, 568);
+            this.button67.Name = "button67";
+            this.button67.Size = new System.Drawing.Size(34, 34);
+            this.button67.TabIndex = 46;
+            this.button67.UseVisualStyleBackColor = true;
+            this.button67.Click += new System.EventHandler(this.button67_Click);
             // 
             // menuPrincipal
             // 
@@ -2067,6 +2143,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(56)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(906, 611);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.registroEmpleados);
+            this.Controls.Add(this.registroClientes);
             this.Controls.Add(this.registroProveedor);
             this.Controls.Add(this.registroVideo);
             this.Controls.Add(this.configuraciones);
@@ -2091,14 +2169,13 @@
             this.configuraciones.PerformLayout();
             this.registroVideo.ResumeLayout(false);
             this.registroVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.registroProveedor.ResumeLayout(false);
             this.registroProveedor.PerformLayout();
             this.registroClientes.ResumeLayout(false);
             this.registroClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.registroEmpleados.ResumeLayout(false);
             this.registroEmpleados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2144,7 +2221,6 @@
         private System.Windows.Forms.Panel registroVideo;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
@@ -2197,7 +2273,30 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.Panel registroClientes;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Button button44;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.Button button48;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Button button49;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Button button50;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Button button52;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Panel registroEmpleados;
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Button button60;
@@ -2223,29 +2322,12 @@
         private System.Windows.Forms.Button button58;
         private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private System.Windows.Forms.Button button66;
+        private System.Windows.Forms.Button button67;
     }
 }
 

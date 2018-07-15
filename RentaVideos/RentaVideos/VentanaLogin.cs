@@ -39,5 +39,10 @@ namespace RentaVideos
         {
             this.txtPass.PasswordChar = '*';
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
