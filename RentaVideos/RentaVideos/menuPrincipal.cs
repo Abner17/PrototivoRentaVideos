@@ -154,11 +154,6 @@ namespace RentaVideos
                     ocultarMenuRegistro = 0;
                     Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
                 }
-                else if (ocultarMenuRegistro == 3)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-                }
                 else if (ocultarMenuRegistro == 4)
                 {
                     ocultarMenuRegistro = 0;
@@ -224,11 +219,6 @@ namespace RentaVideos
                     ocultarMenuRegistro = 0;
                     Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
                 }
-                else if (ocultarMenuRegistro == 3)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-                }
                 else if (ocultarMenuRegistro == 4)
                 {
                     ocultarMenuRegistro = 0;
@@ -254,7 +244,9 @@ namespace RentaVideos
 
         private void btRentar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Formularios.frmRentaVideo nuevaRenta = new Formularios.frmRentaVideo();
+            nuevaRenta.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -302,7 +294,9 @@ namespace RentaVideos
 
         private void btCotizacion_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Formularios.frmCotizacion nuevaCotizacion = new Formularios.frmCotizacion();
+            nuevaCotizacion.Show();
         }
 
         private void panel2_Paint_1(object sender, PaintEventArgs e)
