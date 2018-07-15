@@ -66,8 +66,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.label5 = new System.Windows.Forms.Label();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+=======
+>>>>>>> master
             this.menu.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.registros.SuspendLayout();
@@ -301,13 +304,21 @@
             this.btRentar.ForeColor = System.Drawing.Color.White;
             this.btRentar.Image = global::RentaVideos.Properties.Resources.comprasw;
             this.btRentar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btRentar.Location = new System.Drawing.Point(3, 197);
+=======
+            this.btRentar.Location = new System.Drawing.Point(3, 86);
+>>>>>>> master
             this.btRentar.Name = "btRentar";
             this.btRentar.Size = new System.Drawing.Size(280, 43);
             this.btRentar.TabIndex = 6;
             this.btRentar.Text = "RENTAR VIDEO";
             this.btRentar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btRentar.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+            this.btRentar.Click += new System.EventHandler(this.btRentar_Click);
+>>>>>>> master
             // 
             // btConfiguracion
             // 
@@ -360,6 +371,7 @@
             this.btCotizacion.Text = "COTIZACION";
             this.btCotizacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btCotizacion.UseVisualStyleBackColor = true;
+            this.btCotizacion.Click += new System.EventHandler(this.btCotizacion_Click);
             // 
             // btBusqueda
             // 
@@ -631,6 +643,7 @@
             this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button13.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // label5
             // 
             this.label5.ImageIndex = 2;
@@ -648,6 +661,8 @@
             this.imageList2.Images.SetKeyName(1, "logoGris.png");
             this.imageList2.Images.SetKeyName(2, "logoBlanco.png");
             // 
+=======
+>>>>>>> master
             // menuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
