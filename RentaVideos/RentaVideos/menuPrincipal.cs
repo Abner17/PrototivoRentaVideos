@@ -244,7 +244,9 @@ namespace RentaVideos
 
         private void btRentar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Formularios.frmRentaVideo nuevaRenta = new Formularios.frmRentaVideo();
+            nuevaRenta.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -292,7 +294,9 @@ namespace RentaVideos
 
         private void btCotizacion_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Formularios.frmCotizacion nuevaCotizacion = new Formularios.frmCotizacion();
+            nuevaCotizacion.Show();
         }
 
         private void panel2_Paint_1(object sender, PaintEventArgs e)
