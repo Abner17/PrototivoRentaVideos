@@ -154,6 +154,11 @@ namespace RentaVideos
                     ocultarMenuRegistro = 0;
                     Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
                 }
+                else if (ocultarMenuRegistro == 3)
+                {
+                    ocultarMenuRegistro = 0;
+                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
+                }
                 else if (ocultarMenuRegistro == 4)
                 {
                     ocultarMenuRegistro = 0;
@@ -218,6 +223,11 @@ namespace RentaVideos
                 {
                     ocultarMenuRegistro = 0;
                     Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
+                }
+                else if (ocultarMenuRegistro == 3)
+                {
+                    ocultarMenuRegistro = 0;
+                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
                 }
                 else if (ocultarMenuRegistro == 4)
                 {
