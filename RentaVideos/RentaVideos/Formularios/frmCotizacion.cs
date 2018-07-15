@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentaVideos.Formularios
-{
+namespace RentaVideos.Formularios{
     public partial class frmCotizacion : Form
     {
         public frmCotizacion()
@@ -24,7 +23,9 @@ namespace RentaVideos.Formularios
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.SetVisibleCore(false);
+            this.Hide();
+            menuPrincipal menu = new menuPrincipal();
+            menu.Show();
         }
     }
 }

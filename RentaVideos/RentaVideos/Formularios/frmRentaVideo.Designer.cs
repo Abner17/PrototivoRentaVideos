@@ -48,31 +48,31 @@
             this.lbl_pelicula = new System.Windows.Forms.Label();
             this.lbl_datosAdicionales = new System.Windows.Forms.Label();
             this.pnl_datosPeliculas = new System.Windows.Forms.Panel();
-            this.pnl_datosRenta = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_disponible = new System.Windows.Forms.Label();
-            this.txt_disponible = new System.Windows.Forms.TextBox();
-            this.lbl_formato = new System.Windows.Forms.Label();
-            this.txt_formato = new System.Windows.Forms.TextBox();
-            this.lbl_precioRenta = new System.Windows.Forms.Label();
-            this.txt_precioRenta = new System.Windows.Forms.TextBox();
-            this.lbl_CoboPorDemora = new System.Windows.Forms.Label();
-            this.txt_cobroDemora = new System.Windows.Forms.TextBox();
-            this.lbl_descripcionPelicula = new System.Windows.Forms.Label();
-            this.txt_descripcionPelicula = new System.Windows.Forms.TextBox();
-            this.btn_genero = new System.Windows.Forms.Button();
-            this.btn_apto = new System.Windows.Forms.Button();
-            this.btn_formato = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_buscarCodigo = new System.Windows.Forms.Button();
             this.btn_buscarNombre = new System.Windows.Forms.Button();
-            this.btn_facturar = new System.Windows.Forms.Button();
-            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_buscarCodigo = new System.Windows.Forms.Button();
+            this.btn_apto = new System.Windows.Forms.Button();
+            this.btn_genero = new System.Windows.Forms.Button();
             this.pic_pelicula = new System.Windows.Forms.PictureBox();
+            this.pnl_datosRenta = new System.Windows.Forms.Panel();
+            this.btn_facturar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_formato = new System.Windows.Forms.Button();
+            this.txt_descripcionPelicula = new System.Windows.Forms.TextBox();
+            this.lbl_descripcionPelicula = new System.Windows.Forms.Label();
+            this.txt_cobroDemora = new System.Windows.Forms.TextBox();
+            this.lbl_CoboPorDemora = new System.Windows.Forms.Label();
+            this.txt_precioRenta = new System.Windows.Forms.TextBox();
+            this.lbl_precioRenta = new System.Windows.Forms.Label();
+            this.txt_formato = new System.Windows.Forms.TextBox();
+            this.lbl_formato = new System.Windows.Forms.Label();
+            this.txt_disponible = new System.Windows.Forms.TextBox();
+            this.lbl_disponible = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_duracion)).BeginInit();
             this.pnl_datosPeliculas.SuspendLayout();
-            this.pnl_datosRenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pelicula)).BeginInit();
+            this.pnl_datosRenta.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -299,6 +299,51 @@
             this.pnl_datosPeliculas.Size = new System.Drawing.Size(459, 590);
             this.pnl_datosPeliculas.TabIndex = 20;
             // 
+            // btn_buscarNombre
+            // 
+            this.btn_buscarNombre.Location = new System.Drawing.Point(256, 90);
+            this.btn_buscarNombre.Name = "btn_buscarNombre";
+            this.btn_buscarNombre.Size = new System.Drawing.Size(119, 23);
+            this.btn_buscarNombre.TabIndex = 22;
+            this.btn_buscarNombre.Text = "BUSCAR";
+            this.btn_buscarNombre.UseVisualStyleBackColor = true;
+            // 
+            // btn_buscarCodigo
+            // 
+            this.btn_buscarCodigo.Location = new System.Drawing.Point(256, 49);
+            this.btn_buscarCodigo.Name = "btn_buscarCodigo";
+            this.btn_buscarCodigo.Size = new System.Drawing.Size(119, 23);
+            this.btn_buscarCodigo.TabIndex = 21;
+            this.btn_buscarCodigo.Text = "BUSCAR";
+            this.btn_buscarCodigo.UseVisualStyleBackColor = true;
+            // 
+            // btn_apto
+            // 
+            this.btn_apto.Location = new System.Drawing.Point(272, 364);
+            this.btn_apto.Name = "btn_apto";
+            this.btn_apto.Size = new System.Drawing.Size(119, 23);
+            this.btn_apto.TabIndex = 20;
+            this.btn_apto.Text = "NUEVO ";
+            this.btn_apto.UseVisualStyleBackColor = true;
+            // 
+            // btn_genero
+            // 
+            this.btn_genero.Location = new System.Drawing.Point(272, 312);
+            this.btn_genero.Name = "btn_genero";
+            this.btn_genero.Size = new System.Drawing.Size(119, 23);
+            this.btn_genero.TabIndex = 12;
+            this.btn_genero.Text = "NUEVO GENERO";
+            this.btn_genero.UseVisualStyleBackColor = true;
+            // 
+            // pic_pelicula
+            // 
+            this.pic_pelicula.Image = global::RentaVideos.Properties.Resources.registrob;
+            this.pic_pelicula.Location = new System.Drawing.Point(114, 453);
+            this.pic_pelicula.Name = "pic_pelicula";
+            this.pic_pelicula.Size = new System.Drawing.Size(120, 102);
+            this.pic_pelicula.TabIndex = 18;
+            this.pic_pelicula.TabStop = false;
+            // 
             // pnl_datosRenta
             // 
             this.pnl_datosRenta.Controls.Add(this.btn_facturar);
@@ -320,84 +365,39 @@
             this.pnl_datosRenta.Size = new System.Drawing.Size(454, 590);
             this.pnl_datosRenta.TabIndex = 21;
             // 
-            // label2
+            // btn_facturar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(50, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DATOS DE RENTA  :";
+            this.btn_facturar.Location = new System.Drawing.Point(197, 338);
+            this.btn_facturar.Name = "btn_facturar";
+            this.btn_facturar.Size = new System.Drawing.Size(119, 23);
+            this.btn_facturar.TabIndex = 23;
+            this.btn_facturar.Text = "FACTURAR";
+            this.btn_facturar.UseVisualStyleBackColor = true;
             // 
-            // lbl_disponible
+            // btn_guardar
             // 
-            this.lbl_disponible.AutoSize = true;
-            this.lbl_disponible.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_disponible.Location = new System.Drawing.Point(23, 59);
-            this.lbl_disponible.Name = "lbl_disponible";
-            this.lbl_disponible.Size = new System.Drawing.Size(126, 13);
-            this.lbl_disponible.TabIndex = 2;
-            this.lbl_disponible.Text = "COPIAS DISPONIBLES :";
+            this.btn_guardar.Location = new System.Drawing.Point(50, 338);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(119, 23);
+            this.btn_guardar.TabIndex = 22;
+            this.btn_guardar.Text = "GUARDAR";
+            this.btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // txt_disponible
+            // btn_formato
             // 
-            this.txt_disponible.Location = new System.Drawing.Point(155, 52);
-            this.txt_disponible.Name = "txt_disponible";
-            this.txt_disponible.Size = new System.Drawing.Size(121, 20);
-            this.txt_disponible.TabIndex = 3;
+            this.btn_formato.Location = new System.Drawing.Point(291, 87);
+            this.btn_formato.Name = "btn_formato";
+            this.btn_formato.Size = new System.Drawing.Size(119, 23);
+            this.btn_formato.TabIndex = 21;
+            this.btn_formato.Text = "NUEVO FORMATO";
+            this.btn_formato.UseVisualStyleBackColor = true;
             // 
-            // lbl_formato
+            // txt_descripcionPelicula
             // 
-            this.lbl_formato.AutoSize = true;
-            this.lbl_formato.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_formato.Location = new System.Drawing.Point(23, 97);
-            this.lbl_formato.Name = "lbl_formato";
-            this.lbl_formato.Size = new System.Drawing.Size(66, 13);
-            this.lbl_formato.TabIndex = 4;
-            this.lbl_formato.Text = "FORMATO :";
-            // 
-            // txt_formato
-            // 
-            this.txt_formato.Location = new System.Drawing.Point(155, 90);
-            this.txt_formato.Name = "txt_formato";
-            this.txt_formato.Size = new System.Drawing.Size(121, 20);
-            this.txt_formato.TabIndex = 5;
-            // 
-            // lbl_precioRenta
-            // 
-            this.lbl_precioRenta.AutoSize = true;
-            this.lbl_precioRenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_precioRenta.Location = new System.Drawing.Point(23, 134);
-            this.lbl_precioRenta.Name = "lbl_precioRenta";
-            this.lbl_precioRenta.Size = new System.Drawing.Size(111, 13);
-            this.lbl_precioRenta.TabIndex = 6;
-            this.lbl_precioRenta.Text = "PRECIO DE RENTA :";
-            // 
-            // txt_precioRenta
-            // 
-            this.txt_precioRenta.Location = new System.Drawing.Point(155, 134);
-            this.txt_precioRenta.Name = "txt_precioRenta";
-            this.txt_precioRenta.Size = new System.Drawing.Size(121, 20);
-            this.txt_precioRenta.TabIndex = 7;
-            // 
-            // lbl_CoboPorDemora
-            // 
-            this.lbl_CoboPorDemora.AutoSize = true;
-            this.lbl_CoboPorDemora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_CoboPorDemora.Location = new System.Drawing.Point(23, 178);
-            this.lbl_CoboPorDemora.Name = "lbl_CoboPorDemora";
-            this.lbl_CoboPorDemora.Size = new System.Drawing.Size(127, 13);
-            this.lbl_CoboPorDemora.TabIndex = 8;
-            this.lbl_CoboPorDemora.Text = "COBRO POR DEMORA :";
-            // 
-            // txt_cobroDemora
-            // 
-            this.txt_cobroDemora.Location = new System.Drawing.Point(156, 175);
-            this.txt_cobroDemora.Name = "txt_cobroDemora";
-            this.txt_cobroDemora.Size = new System.Drawing.Size(121, 20);
-            this.txt_cobroDemora.TabIndex = 9;
+            this.txt_descripcionPelicula.Location = new System.Drawing.Point(50, 287);
+            this.txt_descripcionPelicula.Name = "txt_descripcionPelicula";
+            this.txt_descripcionPelicula.Size = new System.Drawing.Size(341, 20);
+            this.txt_descripcionPelicula.TabIndex = 11;
             // 
             // lbl_descripcionPelicula
             // 
@@ -410,75 +410,84 @@
             this.lbl_descripcionPelicula.TabIndex = 10;
             this.lbl_descripcionPelicula.Text = "DESCRIPCION DE LA PELICULA";
             // 
-            // txt_descripcionPelicula
+            // txt_cobroDemora
             // 
-            this.txt_descripcionPelicula.Location = new System.Drawing.Point(50, 287);
-            this.txt_descripcionPelicula.Name = "txt_descripcionPelicula";
-            this.txt_descripcionPelicula.Size = new System.Drawing.Size(341, 20);
-            this.txt_descripcionPelicula.TabIndex = 11;
+            this.txt_cobroDemora.Location = new System.Drawing.Point(156, 175);
+            this.txt_cobroDemora.Name = "txt_cobroDemora";
+            this.txt_cobroDemora.Size = new System.Drawing.Size(121, 20);
+            this.txt_cobroDemora.TabIndex = 9;
             // 
-            // btn_genero
+            // lbl_CoboPorDemora
             // 
-            this.btn_genero.Location = new System.Drawing.Point(272, 312);
-            this.btn_genero.Name = "btn_genero";
-            this.btn_genero.Size = new System.Drawing.Size(119, 23);
-            this.btn_genero.TabIndex = 12;
-            this.btn_genero.Text = "NUEVO GENERO";
-            this.btn_genero.UseVisualStyleBackColor = true;
+            this.lbl_CoboPorDemora.AutoSize = true;
+            this.lbl_CoboPorDemora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_CoboPorDemora.Location = new System.Drawing.Point(23, 178);
+            this.lbl_CoboPorDemora.Name = "lbl_CoboPorDemora";
+            this.lbl_CoboPorDemora.Size = new System.Drawing.Size(127, 13);
+            this.lbl_CoboPorDemora.TabIndex = 8;
+            this.lbl_CoboPorDemora.Text = "COBRO POR DEMORA :";
             // 
-            // btn_apto
+            // txt_precioRenta
             // 
-            this.btn_apto.Location = new System.Drawing.Point(272, 364);
-            this.btn_apto.Name = "btn_apto";
-            this.btn_apto.Size = new System.Drawing.Size(119, 23);
-            this.btn_apto.TabIndex = 20;
-            this.btn_apto.Text = "NUEVO ";
-            this.btn_apto.UseVisualStyleBackColor = true;
+            this.txt_precioRenta.Location = new System.Drawing.Point(155, 134);
+            this.txt_precioRenta.Name = "txt_precioRenta";
+            this.txt_precioRenta.Size = new System.Drawing.Size(121, 20);
+            this.txt_precioRenta.TabIndex = 7;
             // 
-            // btn_formato
+            // lbl_precioRenta
             // 
-            this.btn_formato.Location = new System.Drawing.Point(291, 87);
-            this.btn_formato.Name = "btn_formato";
-            this.btn_formato.Size = new System.Drawing.Size(119, 23);
-            this.btn_formato.TabIndex = 21;
-            this.btn_formato.Text = "NUEVO FORMATO";
-            this.btn_formato.UseVisualStyleBackColor = true;
+            this.lbl_precioRenta.AutoSize = true;
+            this.lbl_precioRenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_precioRenta.Location = new System.Drawing.Point(23, 134);
+            this.lbl_precioRenta.Name = "lbl_precioRenta";
+            this.lbl_precioRenta.Size = new System.Drawing.Size(111, 13);
+            this.lbl_precioRenta.TabIndex = 6;
+            this.lbl_precioRenta.Text = "PRECIO DE RENTA :";
             // 
-            // btn_guardar
+            // txt_formato
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(50, 338);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(119, 23);
-            this.btn_guardar.TabIndex = 22;
-            this.btn_guardar.Text = "GUARDAR";
-            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.txt_formato.Location = new System.Drawing.Point(155, 90);
+            this.txt_formato.Name = "txt_formato";
+            this.txt_formato.Size = new System.Drawing.Size(121, 20);
+            this.txt_formato.TabIndex = 5;
             // 
-            // btn_buscarCodigo
+            // lbl_formato
             // 
-            this.btn_buscarCodigo.Location = new System.Drawing.Point(256, 49);
-            this.btn_buscarCodigo.Name = "btn_buscarCodigo";
-            this.btn_buscarCodigo.Size = new System.Drawing.Size(119, 23);
-            this.btn_buscarCodigo.TabIndex = 21;
-            this.btn_buscarCodigo.Text = "BUSCAR";
-            this.btn_buscarCodigo.UseVisualStyleBackColor = true;
+            this.lbl_formato.AutoSize = true;
+            this.lbl_formato.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_formato.Location = new System.Drawing.Point(23, 97);
+            this.lbl_formato.Name = "lbl_formato";
+            this.lbl_formato.Size = new System.Drawing.Size(66, 13);
+            this.lbl_formato.TabIndex = 4;
+            this.lbl_formato.Text = "FORMATO :";
             // 
-            // btn_buscarNombre
+            // txt_disponible
             // 
-            this.btn_buscarNombre.Location = new System.Drawing.Point(256, 90);
-            this.btn_buscarNombre.Name = "btn_buscarNombre";
-            this.btn_buscarNombre.Size = new System.Drawing.Size(119, 23);
-            this.btn_buscarNombre.TabIndex = 22;
-            this.btn_buscarNombre.Text = "BUSCAR";
-            this.btn_buscarNombre.UseVisualStyleBackColor = true;
+            this.txt_disponible.Location = new System.Drawing.Point(155, 52);
+            this.txt_disponible.Name = "txt_disponible";
+            this.txt_disponible.Size = new System.Drawing.Size(121, 20);
+            this.txt_disponible.TabIndex = 3;
             // 
-            // btn_facturar
+            // lbl_disponible
             // 
-            this.btn_facturar.Location = new System.Drawing.Point(197, 338);
-            this.btn_facturar.Name = "btn_facturar";
-            this.btn_facturar.Size = new System.Drawing.Size(119, 23);
-            this.btn_facturar.TabIndex = 23;
-            this.btn_facturar.Text = "FACTURAR";
-            this.btn_facturar.UseVisualStyleBackColor = true;
+            this.lbl_disponible.AutoSize = true;
+            this.lbl_disponible.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_disponible.Location = new System.Drawing.Point(23, 59);
+            this.lbl_disponible.Name = "lbl_disponible";
+            this.lbl_disponible.Size = new System.Drawing.Size(126, 13);
+            this.lbl_disponible.TabIndex = 2;
+            this.lbl_disponible.Text = "COPIAS DISPONIBLES :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(50, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DATOS DE RENTA  :";
             // 
             // btn_cerrar
             // 
@@ -493,15 +502,6 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // pic_pelicula
-            // 
-            this.pic_pelicula.Image = global::RentaVideos.Properties.Resources.registrob;
-            this.pic_pelicula.Location = new System.Drawing.Point(114, 453);
-            this.pic_pelicula.Name = "pic_pelicula";
-            this.pic_pelicula.Size = new System.Drawing.Size(120, 102);
-            this.pic_pelicula.TabIndex = 18;
-            this.pic_pelicula.TabStop = false;
-            // 
             // frmRentaVideo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,13 +514,14 @@
             this.Controls.Add(this.pnl_datosPeliculas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRentaVideo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmRentaVideo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_duracion)).EndInit();
             this.pnl_datosPeliculas.ResumeLayout(false);
             this.pnl_datosPeliculas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pelicula)).EndInit();
             this.pnl_datosRenta.ResumeLayout(false);
             this.pnl_datosRenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pelicula)).EndInit();
             this.ResumeLayout(false);
 
         }
