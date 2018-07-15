@@ -44,18 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCotizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCotizacion.designer.cs">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRentaVideo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRentaVideo.designer.cs">
-      <DependentUpon>frmRentaVideo.cs</DependentUpon>
-    </Compile>
     <Compile Include="menuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,12 +58,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCotizacion.resx">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRentaVideo.resx">
-      <DependentUpon>frmRentaVideo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
