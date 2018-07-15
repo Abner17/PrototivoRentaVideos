@@ -25,12 +25,9 @@ namespace RentaVideos
             {
                 int flags = effmap[(int)effect];
 
-                if (ctl.Visible)
-                {
+                if (ctl.Visible){
                     flags |= 0x10000; angle += 180;
-                }
-                else
-                {
+                }else{
                     if (ctl.TopLevelControl == ctl) flags |= 0x20000;
                     else if (effect == Effect.Blend) throw new ArgumentException();
                 }
@@ -98,7 +95,9 @@ namespace RentaVideos
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            VentanaLogin login = new VentanaLogin();
+            login.Show();
         }
 
         private void btRegVideo_Click(object sender, EventArgs e)
