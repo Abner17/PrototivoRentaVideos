@@ -173,5 +173,17 @@ namespace RentaVideos
                 Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
             }
         }
+
+        private void btRentar_Click(object sender, EventArgs e)
+        {
+            Formularios.frmRentaVideo frmRentaVideo = new Formularios.frmRentaVideo();
+            frmRentaVideo.Show();
+        }
+
+        private void btCotizacion_Click(object sender, EventArgs e)
+        {
+            Formularios.frmCotizacion frmCotizacion = new Formularios.frmCotizacion();
+            frmCotizacion.Show();
+        }
     }
 }
