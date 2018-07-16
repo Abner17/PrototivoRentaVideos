@@ -44,6 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="buscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarCliente.Designer.cs">
+      <DependentUpon>buscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaEmpleado.Designer.cs">
+      <DependentUpon>busquedaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaProveedor.Designer.cs">
+      <DependentUpon>busquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaVideo.Designer.cs">
+      <DependentUpon>busquedaVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +79,12 @@
     </Compile>
     <Compile Include="Formularios\frmRentaVideo.Designer.cs">
       <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="menuPrincipal.cs">
       <SubType>Form</SubType>
@@ -70,11 +100,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="buscarCliente.resx">
+      <DependentUpon>buscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaEmpleado.resx">
+      <DependentUpon>busquedaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaProveedor.resx">
+      <DependentUpon>busquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaVideo.resx">
+      <DependentUpon>busquedaVideo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRentaVideo.resx">
       <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>

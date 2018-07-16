@@ -119,7 +119,8 @@ namespace RentaVideos
             {
                 Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
-            }else
+            }
+            else
             {
                 
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
@@ -173,7 +174,8 @@ namespace RentaVideos
                
                 Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
-            }else
+            }
+            else
             {
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
             }
@@ -396,27 +398,9 @@ namespace RentaVideos
 
         private void btReportes_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
-
+            this.Hide();
+            frmReportes reporte = new frmReportes();
+            reporte.Show();
         }
 
         private void button64_Click(object sender, EventArgs e)
@@ -568,6 +552,34 @@ namespace RentaVideos
         private void button67_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            busquedaVideo searchVideo = new busquedaVideo();
+            searchVideo.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            busquedaEmpleado searchEmpleado = new busquedaEmpleado();
+            searchEmpleado.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            buscarCliente searchCliente= new buscarCliente();
+            searchCliente.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            busquedaProveedor searchProveedor = new busquedaProveedor();
+            searchProveedor.Show();
         }
     }
 }

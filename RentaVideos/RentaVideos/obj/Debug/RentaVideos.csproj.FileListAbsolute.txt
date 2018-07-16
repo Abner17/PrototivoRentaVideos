@@ -24,3 +24,8 @@ C:\Users\diego\Source\Repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaV
 C:\Users\diego\Source\Repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.csproj.CoreCompileInputs.cache
 C:\Users\diego\Source\Repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.exe
 C:\Users\diego\Source\Repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.pdb
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.busquedaVideo.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.busquedaEmpleado.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.buscarCliente.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.busquedaProveedor.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.frmReportes.resources
