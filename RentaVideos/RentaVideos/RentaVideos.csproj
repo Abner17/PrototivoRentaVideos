@@ -68,6 +68,30 @@
     <Compile Include="busquedaVideo.Designer.cs">
       <DependentUpon>busquedaVideo.cs</DependentUpon>
     </Compile>
+    <Compile Include="configurarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarCliente.Designer.cs">
+      <DependentUpon>configurarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarEmpleado.Designer.cs">
+      <DependentUpon>configurarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarProducto.Designer.cs">
+      <DependentUpon>configurarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarProveedor.Designer.cs">
+      <DependentUpon>configurarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +135,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="busquedaVideo.resx">
       <DependentUpon>busquedaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarCliente.resx">
+      <DependentUpon>configurarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarEmpleado.resx">
+      <DependentUpon>configurarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarProducto.resx">
+      <DependentUpon>configurarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarProveedor.resx">
+      <DependentUpon>configurarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>

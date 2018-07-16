@@ -203,7 +203,9 @@ namespace RentaVideos
 
         private void button14_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
+            configurarProducto cnfProducto = new configurarProducto();
+            cnfProducto.Show();
         }
 
         private void configuraciones_Paint(object sender, PaintEventArgs e)
@@ -368,7 +370,9 @@ namespace RentaVideos
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            configurarProveedor cnfProveedor = new configurarProveedor();
+            cnfProveedor.Show();
         }
 
         private void registroClientes_Paint(object sender, PaintEventArgs e)
@@ -580,6 +584,20 @@ namespace RentaVideos
             this.Hide();
             busquedaProveedor searchProveedor = new busquedaProveedor();
             searchProveedor.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            configurarEmpleado cnfEmpleado = new configurarEmpleado();
+            cnfEmpleado.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            configurarCliente cnfCliente = new configurarCliente();
+            cnfCliente.Show();
         }
     }
 }

@@ -29,3 +29,7 @@ C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaV
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.buscarCliente.resources
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.busquedaProveedor.resources
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.frmReportes.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.configurarCliente.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.configurarEmpleado.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.configurarProducto.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.configurarProveedor.resources
