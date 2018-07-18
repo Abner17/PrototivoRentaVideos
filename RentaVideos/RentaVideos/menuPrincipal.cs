@@ -555,7 +555,9 @@ namespace RentaVideos
 
         private void button67_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmAyudaMenu help = new frmAyudaMenu();
+            help.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -612,6 +614,13 @@ namespace RentaVideos
             this.Hide();
             frmPrivilegios privilegio = new frmPrivilegios();
             privilegio.Show();
+        }
+
+        private void button68_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            rmDevoluciones devolucion = new rmDevoluciones();
+            devolucion.Show();
         }
     }
 }

@@ -133,8 +133,14 @@
   <data name="iconModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ayudaLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\ayudaLogin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="barcod" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\barcod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconModificar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconModificar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_Person_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\icons8_Person_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +160,17 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\logoBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\iconVideo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,9 +183,6 @@
   </data>
   <data name="marcas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\marcas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exitb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\exitb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +205,14 @@
   <data name="comprasw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\comprasw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ayudaLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\ayudaLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="equis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\equis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,7 +244,7 @@
   <data name="icons8_Male_User_104px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\icons8_Male_User_104px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconModificar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconModificar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ayudaMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\ayudaMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

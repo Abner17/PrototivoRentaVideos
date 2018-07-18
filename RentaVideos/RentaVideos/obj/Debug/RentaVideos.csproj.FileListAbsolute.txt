@@ -81,3 +81,6 @@ C:\Users\abner\Documents\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVide
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.Formularios.frmFactura.resources
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.registroUsuario.resources
 C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.frmPrivilegios.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.rmDevoluciones.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.frmAyuda.resources
+C:\Users\abner\source\repos\RentaVideos\RentaVideos\RentaVideos\obj\Debug\RentaVideos.frmAyudaMenu.resources

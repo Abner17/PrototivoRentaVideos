@@ -35,14 +35,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btIngresar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btRegEmpleado = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +108,34 @@
             this.btIngresar.UseVisualStyleBackColor = true;
             this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "iconLinea.png");
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(12, 413);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.ImageIndex = 0;
+            this.label6.ImageList = this.imageList1;
+            this.label6.Location = new System.Drawing.Point(110, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(202, 10);
+            this.label6.TabIndex = 19;
+            // 
             // label5
             // 
             this.label5.ImageIndex = 0;
@@ -116,12 +144,6 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 10);
             this.label5.TabIndex = 18;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "iconLinea.png");
             // 
             // label4
             // 
@@ -168,28 +190,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
-            // 
-            this.label6.ImageIndex = 0;
-            this.label6.ImageList = this.imageList1;
-            this.label6.Location = new System.Drawing.Point(110, 356);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 10);
-            this.label6.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +213,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.VentanaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btRegEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -233,5 +233,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btRegEmpleado;
     }
 }

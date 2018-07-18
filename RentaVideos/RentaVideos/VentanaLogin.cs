@@ -42,6 +42,13 @@ namespace RentaVideos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmAyuda help = new frmAyuda();
+            help.Show();
+        }
+
+        private void VentanaLogin_Load(object sender, EventArgs e)
+        {
 
         }
     }
