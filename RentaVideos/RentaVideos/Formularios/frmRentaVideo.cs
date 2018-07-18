@@ -53,5 +53,12 @@ namespace RentaVideos.Formularios
             menuPrincipal menu = new menuPrincipal();
             menu.Show();
         }
+
+        private void btn_facturar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmFactura factura = new frmFactura();
+            factura.Show();
+        }
     }
 }

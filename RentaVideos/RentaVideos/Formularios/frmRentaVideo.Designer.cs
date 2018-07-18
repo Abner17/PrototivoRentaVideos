@@ -48,15 +48,14 @@
             this.lbl_pelicula = new System.Windows.Forms.Label();
             this.lbl_datosAdicionales = new System.Windows.Forms.Label();
             this.pnl_datosPeliculas = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_buscarNombre = new System.Windows.Forms.Button();
-            this.btn_buscarCodigo = new System.Windows.Forms.Button();
-            this.btn_apto = new System.Windows.Forms.Button();
-            this.btn_genero = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.pic_pelicula = new System.Windows.Forms.PictureBox();
             this.pnl_datosRenta = new System.Windows.Forms.Panel();
             this.btn_facturar = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_formato = new System.Windows.Forms.Button();
+            this.btn_nuevoFormulario = new System.Windows.Forms.Button();
             this.txt_descripcionPelicula = new System.Windows.Forms.TextBox();
             this.lbl_descripcionPelicula = new System.Windows.Forms.Label();
             this.txt_cobroDemora = new System.Windows.Forms.TextBox();
@@ -270,10 +269,10 @@
             // 
             // pnl_datosPeliculas
             // 
+            this.pnl_datosPeliculas.Controls.Add(this.button3);
+            this.pnl_datosPeliculas.Controls.Add(this.btn_nuevo);
             this.pnl_datosPeliculas.Controls.Add(this.btn_buscarNombre);
-            this.pnl_datosPeliculas.Controls.Add(this.btn_buscarCodigo);
-            this.pnl_datosPeliculas.Controls.Add(this.btn_apto);
-            this.pnl_datosPeliculas.Controls.Add(this.btn_genero);
+            this.pnl_datosPeliculas.Controls.Add(this.btn_buscar);
             this.pnl_datosPeliculas.Controls.Add(this.label1);
             this.pnl_datosPeliculas.Controls.Add(this.pic_pelicula);
             this.pnl_datosPeliculas.Controls.Add(this.lbl_datosAdicionales);
@@ -299,41 +298,57 @@
             this.pnl_datosPeliculas.Size = new System.Drawing.Size(459, 590);
             this.pnl_datosPeliculas.TabIndex = 20;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(256, 352);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(179, 36);
+            this.button3.TabIndex = 54;
+            this.button3.Text = "NUEVO GENERO";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_nuevo.ForeColor = System.Drawing.Color.White;
+            this.btn_nuevo.Location = new System.Drawing.Point(256, 297);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(179, 36);
+            this.btn_nuevo.TabIndex = 53;
+            this.btn_nuevo.Text = "NUEVO GENERO";
+            this.btn_nuevo.UseVisualStyleBackColor = true;
+            // 
             // btn_buscarNombre
             // 
-            this.btn_buscarNombre.Location = new System.Drawing.Point(256, 90);
+            this.btn_buscarNombre.FlatAppearance.BorderSize = 0;
+            this.btn_buscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_buscarNombre.ForeColor = System.Drawing.Color.White;
+            this.btn_buscarNombre.Location = new System.Drawing.Point(256, 78);
             this.btn_buscarNombre.Name = "btn_buscarNombre";
-            this.btn_buscarNombre.Size = new System.Drawing.Size(119, 23);
-            this.btn_buscarNombre.TabIndex = 22;
+            this.btn_buscarNombre.Size = new System.Drawing.Size(179, 36);
+            this.btn_buscarNombre.TabIndex = 52;
             this.btn_buscarNombre.Text = "BUSCAR";
             this.btn_buscarNombre.UseVisualStyleBackColor = true;
             // 
-            // btn_buscarCodigo
+            // btn_buscar
             // 
-            this.btn_buscarCodigo.Location = new System.Drawing.Point(256, 49);
-            this.btn_buscarCodigo.Name = "btn_buscarCodigo";
-            this.btn_buscarCodigo.Size = new System.Drawing.Size(119, 23);
-            this.btn_buscarCodigo.TabIndex = 21;
-            this.btn_buscarCodigo.Text = "BUSCAR";
-            this.btn_buscarCodigo.UseVisualStyleBackColor = true;
-            // 
-            // btn_apto
-            // 
-            this.btn_apto.Location = new System.Drawing.Point(272, 364);
-            this.btn_apto.Name = "btn_apto";
-            this.btn_apto.Size = new System.Drawing.Size(119, 23);
-            this.btn_apto.TabIndex = 20;
-            this.btn_apto.Text = "NUEVO ";
-            this.btn_apto.UseVisualStyleBackColor = true;
-            // 
-            // btn_genero
-            // 
-            this.btn_genero.Location = new System.Drawing.Point(272, 312);
-            this.btn_genero.Name = "btn_genero";
-            this.btn_genero.Size = new System.Drawing.Size(119, 23);
-            this.btn_genero.TabIndex = 12;
-            this.btn_genero.Text = "NUEVO GENERO";
-            this.btn_genero.UseVisualStyleBackColor = true;
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_buscar.ForeColor = System.Drawing.Color.White;
+            this.btn_buscar.Location = new System.Drawing.Point(256, 44);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(179, 36);
+            this.btn_buscar.TabIndex = 51;
+            this.btn_buscar.Text = "BUSCAR";
+            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // pic_pelicula
             // 
@@ -347,8 +362,7 @@
             // pnl_datosRenta
             // 
             this.pnl_datosRenta.Controls.Add(this.btn_facturar);
-            this.pnl_datosRenta.Controls.Add(this.btn_guardar);
-            this.pnl_datosRenta.Controls.Add(this.btn_formato);
+            this.pnl_datosRenta.Controls.Add(this.btn_nuevoFormulario);
             this.pnl_datosRenta.Controls.Add(this.txt_descripcionPelicula);
             this.pnl_datosRenta.Controls.Add(this.lbl_descripcionPelicula);
             this.pnl_datosRenta.Controls.Add(this.txt_cobroDemora);
@@ -362,35 +376,35 @@
             this.pnl_datosRenta.Controls.Add(this.label2);
             this.pnl_datosRenta.Location = new System.Drawing.Point(477, 12);
             this.pnl_datosRenta.Name = "pnl_datosRenta";
-            this.pnl_datosRenta.Size = new System.Drawing.Size(454, 590);
+            this.pnl_datosRenta.Size = new System.Drawing.Size(520, 590);
             this.pnl_datosRenta.TabIndex = 21;
             // 
             // btn_facturar
             // 
-            this.btn_facturar.Location = new System.Drawing.Point(197, 338);
+            this.btn_facturar.FlatAppearance.BorderSize = 0;
+            this.btn_facturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_facturar.ForeColor = System.Drawing.Color.White;
+            this.btn_facturar.Location = new System.Drawing.Point(196, 391);
             this.btn_facturar.Name = "btn_facturar";
-            this.btn_facturar.Size = new System.Drawing.Size(119, 23);
-            this.btn_facturar.TabIndex = 23;
-            this.btn_facturar.Text = "FACTURAR";
+            this.btn_facturar.Size = new System.Drawing.Size(296, 36);
+            this.btn_facturar.TabIndex = 56;
+            this.btn_facturar.Text = "GUARDAR Y FACTURAR";
             this.btn_facturar.UseVisualStyleBackColor = true;
+            this.btn_facturar.Click += new System.EventHandler(this.btn_facturar_Click);
             // 
-            // btn_guardar
+            // btn_nuevoFormulario
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(50, 338);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(119, 23);
-            this.btn_guardar.TabIndex = 22;
-            this.btn_guardar.Text = "GUARDAR";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            // 
-            // btn_formato
-            // 
-            this.btn_formato.Location = new System.Drawing.Point(291, 87);
-            this.btn_formato.Name = "btn_formato";
-            this.btn_formato.Size = new System.Drawing.Size(119, 23);
-            this.btn_formato.TabIndex = 21;
-            this.btn_formato.Text = "NUEVO FORMATO";
-            this.btn_formato.UseVisualStyleBackColor = true;
+            this.btn_nuevoFormulario.FlatAppearance.BorderSize = 0;
+            this.btn_nuevoFormulario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevoFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btn_nuevoFormulario.ForeColor = System.Drawing.Color.White;
+            this.btn_nuevoFormulario.Location = new System.Drawing.Point(289, 83);
+            this.btn_nuevoFormulario.Name = "btn_nuevoFormulario";
+            this.btn_nuevoFormulario.Size = new System.Drawing.Size(243, 35);
+            this.btn_nuevoFormulario.TabIndex = 54;
+            this.btn_nuevoFormulario.Text = "NUEVO FORMATO";
+            this.btn_nuevoFormulario.UseVisualStyleBackColor = true;
             // 
             // txt_descripcionPelicula
             // 
@@ -495,7 +509,7 @@
             this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_cerrar.FlatAppearance.BorderSize = 0;
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(958, 14);
+            this.btn_cerrar.Location = new System.Drawing.Point(1003, 14);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(31, 34);
             this.btn_cerrar.TabIndex = 22;
@@ -507,7 +521,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(56)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1021, 614);
+            this.ClientSize = new System.Drawing.Size(1080, 614);
             this.ControlBox = false;
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.pnl_datosRenta);
@@ -561,13 +575,12 @@
         private System.Windows.Forms.TextBox txt_disponible;
         private System.Windows.Forms.Label lbl_disponible;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_apto;
-        private System.Windows.Forms.Button btn_genero;
-        private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Button btn_formato;
-        private System.Windows.Forms.Button btn_buscarNombre;
-        private System.Windows.Forms.Button btn_buscarCodigo;
-        private System.Windows.Forms.Button btn_facturar;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_nuevo;
+        private System.Windows.Forms.Button btn_buscarNombre;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_facturar;
+        private System.Windows.Forms.Button btn_nuevoFormulario;
     }
 }

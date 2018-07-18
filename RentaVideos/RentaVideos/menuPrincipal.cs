@@ -599,5 +599,19 @@ namespace RentaVideos
             configurarCliente cnfCliente = new configurarCliente();
             cnfCliente.Show();
         }
+
+        private void button69_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            registroUsuario newUsuario = new registroUsuario();
+            newUsuario.Show();
+        }
+
+        private void button70_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrivilegios privilegio = new frmPrivilegios();
+            privilegio.Show();
+        }
     }
 }

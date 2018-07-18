@@ -8,17 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentaVideos.Formularios{
-    public partial class frmCotizacion : Form
+namespace RentaVideos
+{
+    public partial class frmPrivilegios : Form
     {
-        public frmCotizacion()
+        public frmPrivilegios()
         {
             InitializeComponent();
-        }
-
-        private void frmCotizacion_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -28,19 +24,11 @@ namespace RentaVideos.Formularios{
             menu.Show();
         }
 
-        private void pnl_cotizacion_Paint(object sender, PaintEventArgs e)
+        private void btn_guardar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            menuPrincipal menu = new menuPrincipal();
+            menu.Show();
         }
     }
 }

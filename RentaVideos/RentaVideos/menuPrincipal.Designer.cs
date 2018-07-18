@@ -146,6 +146,8 @@
             this.button59 = new System.Windows.Forms.Button();
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
             this.button67 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btRentar = new System.Windows.Forms.Button();
@@ -156,7 +158,7 @@
             this.btRegistro = new System.Windows.Forms.Button();
             this.btRegresar = new System.Windows.Forms.Button();
             this.btMenu = new System.Windows.Forms.Button();
-            this.button66 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -177,6 +179,7 @@
             this.button63 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button65 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.registros.SuspendLayout();
@@ -201,6 +204,8 @@
             // subMenu
             // 
             this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.subMenu.Controls.Add(this.button69);
+            this.subMenu.Controls.Add(this.button68);
             this.subMenu.Controls.Add(this.button67);
             this.subMenu.Controls.Add(this.label9);
             this.subMenu.Controls.Add(this.btRentar);
@@ -237,9 +242,9 @@
             this.registros.Controls.Add(this.btRegCliente);
             this.registros.Controls.Add(this.btRegEmpleado);
             this.registros.Controls.Add(this.btRegVideo);
-            this.registros.Location = new System.Drawing.Point(292, 0);
+            this.registros.Location = new System.Drawing.Point(292, 3);
             this.registros.Name = "registros";
-            this.registros.Size = new System.Drawing.Size(518, 610);
+            this.registros.Size = new System.Drawing.Size(518, 607);
             this.registros.TabIndex = 2;
             this.registros.Visible = false;
             this.registros.Paint += new System.Windows.Forms.PaintEventHandler(this.registros_Paint);
@@ -308,14 +313,15 @@
             // 
             // configuraciones
             // 
+            this.configuraciones.Controls.Add(this.button70);
             this.configuraciones.Controls.Add(this.label4);
             this.configuraciones.Controls.Add(this.button5);
             this.configuraciones.Controls.Add(this.button6);
             this.configuraciones.Controls.Add(this.button7);
             this.configuraciones.Controls.Add(this.button14);
-            this.configuraciones.Location = new System.Drawing.Point(292, 0);
+            this.configuraciones.Location = new System.Drawing.Point(292, 3);
             this.configuraciones.Name = "configuraciones";
-            this.configuraciones.Size = new System.Drawing.Size(518, 610);
+            this.configuraciones.Size = new System.Drawing.Size(556, 607);
             this.configuraciones.TabIndex = 10;
             this.configuraciones.Visible = false;
             this.configuraciones.Paint += new System.Windows.Forms.PaintEventHandler(this.configuraciones_Paint);
@@ -359,9 +365,9 @@
             this.registroVideo.Controls.Add(this.button16);
             this.registroVideo.Controls.Add(this.textBox1);
             this.registroVideo.Controls.Add(this.button15);
-            this.registroVideo.Location = new System.Drawing.Point(288, 0);
+            this.registroVideo.Location = new System.Drawing.Point(288, 3);
             this.registroVideo.Name = "registroVideo";
-            this.registroVideo.Size = new System.Drawing.Size(612, 610);
+            this.registroVideo.Size = new System.Drawing.Size(612, 607);
             this.registroVideo.TabIndex = 11;
             this.registroVideo.Visible = false;
             this.registroVideo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
@@ -1066,9 +1072,9 @@
             this.registroClientes.Controls.Add(this.button52);
             this.registroClientes.Controls.Add(this.textBox24);
             this.registroClientes.Controls.Add(this.button53);
-            this.registroClientes.Location = new System.Drawing.Point(288, 3);
+            this.registroClientes.Location = new System.Drawing.Point(288, 0);
             this.registroClientes.Name = "registroClientes";
-            this.registroClientes.Size = new System.Drawing.Size(615, 604);
+            this.registroClientes.Size = new System.Drawing.Size(615, 607);
             this.registroClientes.TabIndex = 43;
             this.registroClientes.Visible = false;
             // 
@@ -1646,6 +1652,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // button69
+            // 
+            this.button69.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button69.FlatAppearance.BorderSize = 0;
+            this.button69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button69.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button69.ForeColor = System.Drawing.Color.White;
+            this.button69.Image = global::RentaVideos.Properties.Resources.usuario;
+            this.button69.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button69.Location = new System.Drawing.Point(7, 468);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(276, 43);
+            this.button69.TabIndex = 48;
+            this.button69.Text = "REGISTRO USUARIO";
+            this.button69.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button69_Click);
+            // 
+            // button68
+            // 
+            this.button68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button68.FlatAppearance.BorderSize = 0;
+            this.button68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button68.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button68.ForeColor = System.Drawing.Color.White;
+            this.button68.Image = global::RentaVideos.Properties.Resources.barcod;
+            this.button68.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button68.Location = new System.Drawing.Point(6, 423);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(280, 43);
+            this.button68.TabIndex = 47;
+            this.button68.Text = "DEVOLUCIONES";
+            this.button68.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button68.UseVisualStyleBackColor = true;
+            // 
             // button67
             // 
             this.button67.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button67.BackgroundImage")));
@@ -1677,7 +1718,7 @@
             this.btRentar.ForeColor = System.Drawing.Color.White;
             this.btRentar.Image = global::RentaVideos.Properties.Resources.comprasw;
             this.btRentar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRentar.Location = new System.Drawing.Point(3, 227);
+            this.btRentar.Location = new System.Drawing.Point(2, 188);
             this.btRentar.Name = "btRentar";
             this.btRentar.Size = new System.Drawing.Size(280, 43);
             this.btRentar.TabIndex = 6;
@@ -1695,7 +1736,7 @@
             this.btConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btConfiguracion.Image = global::RentaVideos.Properties.Resources.configuration;
             this.btConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btConfiguracion.Location = new System.Drawing.Point(3, 464);
+            this.btConfiguracion.Location = new System.Drawing.Point(6, 517);
             this.btConfiguracion.Name = "btConfiguracion";
             this.btConfiguracion.Size = new System.Drawing.Size(280, 43);
             this.btConfiguracion.TabIndex = 5;
@@ -1713,7 +1754,7 @@
             this.btReportes.ForeColor = System.Drawing.Color.White;
             this.btReportes.Image = global::RentaVideos.Properties.Resources.reportesd;
             this.btReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btReportes.Location = new System.Drawing.Point(3, 415);
+            this.btReportes.Location = new System.Drawing.Point(2, 376);
             this.btReportes.Name = "btReportes";
             this.btReportes.Size = new System.Drawing.Size(280, 43);
             this.btReportes.TabIndex = 4;
@@ -1731,7 +1772,7 @@
             this.btCotizacion.ForeColor = System.Drawing.Color.White;
             this.btCotizacion.Image = global::RentaVideos.Properties.Resources.ventasw;
             this.btCotizacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCotizacion.Location = new System.Drawing.Point(3, 276);
+            this.btCotizacion.Location = new System.Drawing.Point(2, 237);
             this.btCotizacion.Name = "btCotizacion";
             this.btCotizacion.Size = new System.Drawing.Size(280, 43);
             this.btCotizacion.TabIndex = 3;
@@ -1749,11 +1790,11 @@
             this.btBusqueda.ForeColor = System.Drawing.Color.White;
             this.btBusqueda.Image = global::RentaVideos.Properties.Resources.icons8_Search_30px;
             this.btBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBusqueda.Location = new System.Drawing.Point(3, 374);
+            this.btBusqueda.Location = new System.Drawing.Point(2, 335);
             this.btBusqueda.Name = "btBusqueda";
             this.btBusqueda.Size = new System.Drawing.Size(280, 43);
             this.btBusqueda.TabIndex = 2;
-            this.btBusqueda.Text = "BUSQUEDA";
+            this.btBusqueda.Text = "BUSQUEDAS";
             this.btBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btBusqueda.UseVisualStyleBackColor = true;
             this.btBusqueda.Click += new System.EventHandler(this.button4_Click);
@@ -1767,11 +1808,11 @@
             this.btRegistro.ForeColor = System.Drawing.Color.White;
             this.btRegistro.Image = global::RentaVideos.Properties.Resources.registrow;
             this.btRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRegistro.Location = new System.Drawing.Point(3, 325);
+            this.btRegistro.Location = new System.Drawing.Point(2, 286);
             this.btRegistro.Name = "btRegistro";
             this.btRegistro.Size = new System.Drawing.Size(280, 43);
             this.btRegistro.TabIndex = 1;
-            this.btRegistro.Text = "REGISTRO";
+            this.btRegistro.Text = "REGISTROS";
             this.btRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btRegistro.UseVisualStyleBackColor = true;
             this.btRegistro.Click += new System.EventHandler(this.button3_Click);
@@ -1802,18 +1843,23 @@
             this.btMenu.UseVisualStyleBackColor = true;
             this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 
-            // button66
+            // button70
             // 
-            this.button66.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
-            this.button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button66.FlatAppearance.BorderSize = 0;
-            this.button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button66.Location = new System.Drawing.Point(512, 12);
-            this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(31, 34);
-            this.button66.TabIndex = 50;
-            this.button66.UseVisualStyleBackColor = true;
-            this.button66.Click += new System.EventHandler(this.button66_Click);
+            this.button70.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button70.FlatAppearance.BorderSize = 0;
+            this.button70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button70.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button70.ForeColor = System.Drawing.Color.White;
+            this.button70.Image = global::RentaVideos.Properties.Resources.union;
+            this.button70.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button70.Location = new System.Drawing.Point(120, 431);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(308, 172);
+            this.button70.TabIndex = 13;
+            this.button70.Text = "PRIVILEGIOS DE USUARIO";
+            this.button70.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button70.UseVisualStyleBackColor = true;
+            this.button70.Click += new System.EventHandler(this.button70_Click);
             // 
             // button5
             // 
@@ -1824,7 +1870,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::RentaVideos.Properties.Resources.group;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(282, 358);
+            this.button5.Location = new System.Drawing.Point(282, 246);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(179, 172);
             this.button5.TabIndex = 5;
@@ -1842,7 +1888,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = global::RentaVideos.Properties.Resources.user;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(70, 358);
+            this.button6.Location = new System.Drawing.Point(70, 246);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(179, 172);
             this.button6.TabIndex = 4;
@@ -1860,7 +1906,7 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::RentaVideos.Properties.Resources.userw;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(282, 92);
+            this.button7.Location = new System.Drawing.Point(282, 61);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(179, 172);
             this.button7.TabIndex = 3;
@@ -1879,7 +1925,7 @@
             this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button14.ImageIndex = 0;
             this.button14.ImageList = this.imageList1;
-            this.button14.Location = new System.Drawing.Point(70, 92);
+            this.button14.Location = new System.Drawing.Point(70, 61);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(179, 172);
             this.button14.TabIndex = 2;
@@ -2152,6 +2198,19 @@
             this.button65.UseVisualStyleBackColor = true;
             this.button65.Click += new System.EventHandler(this.button65_Click);
             // 
+            // button66
+            // 
+            this.button66.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button66.FlatAppearance.BorderSize = 0;
+            this.button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button66.Location = new System.Drawing.Point(512, 12);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(31, 34);
+            this.button66.TabIndex = 50;
+            this.button66.UseVisualStyleBackColor = true;
+            this.button66.Click += new System.EventHandler(this.button66_Click);
+            // 
             // menuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2345,6 +2404,9 @@
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.Button button67;
         private System.Windows.Forms.ImageList imageList3;
+        private System.Windows.Forms.Button button69;
+        private System.Windows.Forms.Button button68;
+        private System.Windows.Forms.Button button70;
     }
 }
 

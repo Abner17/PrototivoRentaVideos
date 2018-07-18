@@ -35,10 +35,6 @@
             this.lbl_iva = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.btn_consultar = new System.Windows.Forms.Button();
-            this.btn_enviar = new System.Windows.Forms.Button();
-            this.btn_nuevo = new System.Windows.Forms.Button();
             this.txt_subTotal = new System.Windows.Forms.TextBox();
             this.lbl_subTotal = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
@@ -64,21 +60,25 @@
             this.lbl_codigoCotizacion = new System.Windows.Forms.Label();
             this.txt_codigoCotizacion = new System.Windows.Forms.TextBox();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnl_cotizacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_cotizacion
             // 
+            this.pnl_cotizacion.Controls.Add(this.button4);
+            this.pnl_cotizacion.Controls.Add(this.button3);
+            this.pnl_cotizacion.Controls.Add(this.button1);
+            this.pnl_cotizacion.Controls.Add(this.button2);
             this.pnl_cotizacion.Controls.Add(this.txt_totalAPagar);
             this.pnl_cotizacion.Controls.Add(this.lbl_totalPagar);
             this.pnl_cotizacion.Controls.Add(this.txt_iva);
             this.pnl_cotizacion.Controls.Add(this.lbl_iva);
             this.pnl_cotizacion.Controls.Add(this.txt_total);
             this.pnl_cotizacion.Controls.Add(this.lbl_total);
-            this.pnl_cotizacion.Controls.Add(this.btn_salir);
-            this.pnl_cotizacion.Controls.Add(this.btn_consultar);
-            this.pnl_cotizacion.Controls.Add(this.btn_enviar);
-            this.pnl_cotizacion.Controls.Add(this.btn_nuevo);
             this.pnl_cotizacion.Controls.Add(this.txt_subTotal);
             this.pnl_cotizacion.Controls.Add(this.lbl_subTotal);
             this.pnl_cotizacion.Controls.Add(this.txt_precio);
@@ -107,6 +107,7 @@
             this.pnl_cotizacion.Name = "pnl_cotizacion";
             this.pnl_cotizacion.Size = new System.Drawing.Size(786, 520);
             this.pnl_cotizacion.TabIndex = 0;
+            this.pnl_cotizacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cotizacion_Paint);
             // 
             // txt_totalAPagar
             // 
@@ -158,42 +159,6 @@
             this.lbl_total.Size = new System.Drawing.Size(48, 13);
             this.lbl_total.TabIndex = 29;
             this.lbl_total.Text = "TOTAL :";
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.Location = new System.Drawing.Point(468, 433);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(75, 23);
-            this.btn_salir.TabIndex = 28;
-            this.btn_salir.Text = "SALIR";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.Location = new System.Drawing.Point(343, 433);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(75, 23);
-            this.btn_consultar.TabIndex = 27;
-            this.btn_consultar.Text = "CONSULTAR";
-            this.btn_consultar.UseVisualStyleBackColor = true;
-            // 
-            // btn_enviar
-            // 
-            this.btn_enviar.Location = new System.Drawing.Point(191, 433);
-            this.btn_enviar.Name = "btn_enviar";
-            this.btn_enviar.Size = new System.Drawing.Size(75, 23);
-            this.btn_enviar.TabIndex = 26;
-            this.btn_enviar.Text = "ENVIAR";
-            this.btn_enviar.UseVisualStyleBackColor = true;
-            // 
-            // btn_nuevo
-            // 
-            this.btn_nuevo.Location = new System.Drawing.Point(32, 433);
-            this.btn_nuevo.Name = "btn_nuevo";
-            this.btn_nuevo.Size = new System.Drawing.Size(75, 23);
-            this.btn_nuevo.TabIndex = 25;
-            this.btn_nuevo.Text = "NUEVO";
-            this.btn_nuevo.UseVisualStyleBackColor = true;
             // 
             // txt_subTotal
             // 
@@ -417,6 +382,60 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(3, 423);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 36);
+            this.button2.TabIndex = 54;
+            this.button2.Text = "NUEVO GENERO";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(122, 423);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 36);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "ENVIAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(233, 423);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(222, 36);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "CONSULTA";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(439, 423);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 36);
+            this.button4.TabIndex = 57;
+            this.button4.Text = "SALIR";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // frmCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,10 +468,6 @@
         private System.Windows.Forms.Label lbl_iva;
         private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.Button btn_consultar;
-        private System.Windows.Forms.Button btn_enviar;
-        private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.TextBox txt_subTotal;
         private System.Windows.Forms.Label lbl_subTotal;
         private System.Windows.Forms.TextBox txt_precio;
@@ -473,5 +488,9 @@
         private System.Windows.Forms.Label lbl_nombreCliente;
         private System.Windows.Forms.Label lbl_datosCliente;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

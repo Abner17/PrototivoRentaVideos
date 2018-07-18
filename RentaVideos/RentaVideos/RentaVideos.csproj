@@ -98,11 +98,23 @@
     <Compile Include="Formularios\frmCotizacion.Designer.cs">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmRentaVideo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmRentaVideo.Designer.cs">
       <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivilegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivilegios.Designer.cs">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReportes.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,12 @@
     </Compile>
     <Compile Include="menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registroUsuario.Designer.cs">
+      <DependentUpon>registroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaLogin.cs">
       <SubType>Form</SubType>
@@ -151,14 +169,23 @@
     <EmbeddedResource Include="Formularios\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRentaVideo.resx">
       <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivilegios.resx">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registroUsuario.resx">
+      <DependentUpon>registroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaLogin.resx">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
