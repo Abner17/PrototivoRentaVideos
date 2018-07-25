@@ -12,15 +12,21 @@ namespace RentaVideos
 {
     public partial class rmDevoluciones : Form
     {
+        string user = "";
         public rmDevoluciones()
         {
             InitializeComponent();
+        }
+        public rmDevoluciones(string user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void btRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
         }
 

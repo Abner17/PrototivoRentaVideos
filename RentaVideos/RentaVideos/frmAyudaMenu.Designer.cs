@@ -56,6 +56,7 @@
             this.Name = "frmAyudaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAyudaMenu";
+            this.Load += new System.EventHandler(this.frmAyudaMenu_Load);
             this.ResumeLayout(false);
 
         }

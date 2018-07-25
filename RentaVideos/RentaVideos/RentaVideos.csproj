@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RentaVideos</RootNamespace>
     <AssemblyName>RentaVideos</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +70,8 @@
     <Compile Include="busquedaVideo.Designer.cs">
       <DependentUpon>busquedaVideo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes.cs" />
+    <Compile Include="ConectarServidor.cs" />
     <Compile Include="configurarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +144,30 @@
     <Compile Include="menuPrincipal.Designer.cs">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="registrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarCliente.Designer.cs">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarEmpleado.Designer.cs">
+      <DependentUpon>registrarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarProveedor.Designer.cs">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarVideo.Designer.cs">
+      <DependentUpon>registrarVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="registroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +188,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Video.cs" />
     <EmbeddedResource Include="buscarCliente.resx">
       <DependentUpon>buscarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +236,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menuPrincipal.resx">
       <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarCliente.resx">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarEmpleado.resx">
+      <DependentUpon>registrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarProveedor.resx">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarVideo.resx">
+      <DependentUpon>registrarVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registroUsuario.resx">
       <DependentUpon>registroUsuario.cs</DependentUpon>
@@ -368,6 +409,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\ayudaMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconoAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconoCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconNueva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconNueva2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

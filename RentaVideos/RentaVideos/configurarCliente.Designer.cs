@@ -351,6 +351,7 @@
             this.Name = "configurarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "configurarCliente";
+            this.Load += new System.EventHandler(this.configurarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

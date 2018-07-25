@@ -12,9 +12,15 @@ namespace RentaVideos.Formularios
 {
     public partial class frmFactura : Form
     {
+        string user = "";
         public frmFactura()
         {
             InitializeComponent();
+        }
+        public frmFactura(string user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void frmFactura_Load(object sender, EventArgs e)
@@ -47,7 +53,7 @@ namespace RentaVideos.Formularios
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
         }
     }

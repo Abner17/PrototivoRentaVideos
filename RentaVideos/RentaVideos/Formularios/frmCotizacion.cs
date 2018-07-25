@@ -11,11 +11,16 @@ using System.Windows.Forms;
 namespace RentaVideos.Formularios{
     public partial class frmCotizacion : Form
     {
+        string user = "";
         public frmCotizacion()
         {
             InitializeComponent();
         }
-
+        public frmCotizacion(string user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
         private void frmCotizacion_Load(object sender, EventArgs e)
         {
 
@@ -23,9 +28,9 @@ namespace RentaVideos.Formularios{
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
+            this.Hide();
         }
 
         private void pnl_cotizacion_Paint(object sender, PaintEventArgs e)

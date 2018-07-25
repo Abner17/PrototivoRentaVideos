@@ -16,12 +16,23 @@ namespace RentaVideos
         {
             InitializeComponent();
         }
+        string user = "";
+        public buscarCliente(string user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
 
         private void btRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
+        }
+
+        private void buscarCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

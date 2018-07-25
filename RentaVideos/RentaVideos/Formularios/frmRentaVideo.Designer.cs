@@ -349,6 +349,7 @@
             this.btn_buscar.TabIndex = 51;
             this.btn_buscar.Text = "BUSCAR";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // pic_pelicula
             // 

@@ -30,11 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btIngresar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btBusqueda = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btRegresar = new System.Windows.Forms.Button();
             this.button62 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button26 = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@
             this.button16 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btBusqueda = new System.Windows.Forms.Button();
-            this.btRegresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,22 @@
             this.btIngresar.Text = "NUEVA BUSQUEDA";
             this.btIngresar.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::RentaVideos.Properties.Resources.icons8_Search_30px;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(266, 192);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 28);
+            this.button1.TabIndex = 41;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // tbNombre
             // 
             this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
@@ -112,6 +128,22 @@
             this.label2.Size = new System.Drawing.Size(245, 29);
             this.label2.TabIndex = 39;
             this.label2.Text = "BUSCAR POR NOMBRE: ";
+            // 
+            // btBusqueda
+            // 
+            this.btBusqueda.BackgroundImage = global::RentaVideos.Properties.Resources.icons8_Search_30px;
+            this.btBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btBusqueda.FlatAppearance.BorderSize = 0;
+            this.btBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBusqueda.ForeColor = System.Drawing.Color.White;
+            this.btBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBusqueda.Location = new System.Drawing.Point(266, 106);
+            this.btBusqueda.Name = "btBusqueda";
+            this.btBusqueda.Size = new System.Drawing.Size(27, 28);
+            this.btBusqueda.TabIndex = 38;
+            this.btBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btBusqueda.UseVisualStyleBackColor = true;
             // 
             // tbCodigo
             // 
@@ -141,6 +173,19 @@
             this.label8.Size = new System.Drawing.Size(244, 31);
             this.label8.TabIndex = 35;
             this.label8.Text = "BUSQUEDA VIDEO";
+            // 
+            // btRegresar
+            // 
+            this.btRegresar.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
+            this.btRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btRegresar.FlatAppearance.BorderSize = 0;
+            this.btRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRegresar.Location = new System.Drawing.Point(12, 13);
+            this.btRegresar.Name = "btRegresar";
+            this.btRegresar.Size = new System.Drawing.Size(31, 34);
+            this.btRegresar.TabIndex = 1;
+            this.btRegresar.UseVisualStyleBackColor = true;
+            this.btRegresar.Click += new System.EventHandler(this.btRegresar_Click);
             // 
             // button62
             // 
@@ -414,51 +459,6 @@
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button15.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::RentaVideos.Properties.Resources.icons8_Search_30px;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(266, 192);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 28);
-            this.button1.TabIndex = 41;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btBusqueda
-            // 
-            this.btBusqueda.BackgroundImage = global::RentaVideos.Properties.Resources.icons8_Search_30px;
-            this.btBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBusqueda.FlatAppearance.BorderSize = 0;
-            this.btBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBusqueda.ForeColor = System.Drawing.Color.White;
-            this.btBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBusqueda.Location = new System.Drawing.Point(266, 106);
-            this.btBusqueda.Name = "btBusqueda";
-            this.btBusqueda.Size = new System.Drawing.Size(27, 28);
-            this.btBusqueda.TabIndex = 38;
-            this.btBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btBusqueda.UseVisualStyleBackColor = true;
-            // 
-            // btRegresar
-            // 
-            this.btRegresar.BackgroundImage = global::RentaVideos.Properties.Resources.left_arrow;
-            this.btRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btRegresar.FlatAppearance.BorderSize = 0;
-            this.btRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRegresar.Location = new System.Drawing.Point(12, 13);
-            this.btRegresar.Name = "btRegresar";
-            this.btRegresar.Size = new System.Drawing.Size(31, 34);
-            this.btRegresar.TabIndex = 1;
-            this.btRegresar.UseVisualStyleBackColor = true;
-            this.btRegresar.Click += new System.EventHandler(this.btRegresar_Click);
-            // 
             // busquedaVideo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +493,7 @@
             this.Name = "busquedaVideo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "busquedaVideo";
+            this.Load += new System.EventHandler(this.busquedaVideo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

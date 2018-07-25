@@ -16,11 +16,17 @@ namespace RentaVideos
         {
             InitializeComponent();
         }
+        string user = "";
+        public configurarProducto(string user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
 
         private void btRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
         }
     }

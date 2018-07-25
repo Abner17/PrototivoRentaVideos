@@ -201,6 +201,7 @@
             this.Name = "frmPrivilegios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrivilegios";
+            this.Load += new System.EventHandler(this.frmPrivilegios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,16 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace RentaVideos
 {
     public partial class menuPrincipal : Form
     {
+        string user = "";
         public menuPrincipal()
         {
             InitializeComponent();
         }
+        public menuPrincipal(string user)
+        {
+            InitializeComponent();
+            MySqlCommand sql2 = new MySqlCommand(String.Format("Select * from Usuarios where Nick_Name='" + user + "'"), ConectarServidor.conexion());
+            MySqlDataReader reader = sql2.ExecuteReader();
 
+            if (reader.Read() == true)
+            {
+                btRentar.Enabled = reader.GetBoolean(4);
+                btCotizacion.Enabled = reader.GetBoolean(5);
+                btRegistro.Enabled = reader.GetBoolean(6);
+                btBusqueda.Enabled = reader.GetBoolean(7);
+                btDevoluciones.Enabled = reader.GetBoolean(8);
+                btRegistroUsuario.Enabled = reader.GetBoolean(9);
+                btConfiguracion.Enabled = reader.GetBoolean(10);
+                this.user = user;
+            }
+        }
         public static class Util
         {
             public enum Effect {  Roll, Slide, Center, Blend}
@@ -54,9 +73,8 @@ namespace RentaVideos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
-        int ocultarMenuRegistro = 0;
         private void btMenu_Click(object sender, EventArgs e)
         {
             Util.Animate(menu, Util.Effect.Roll, 150, 360);
@@ -87,27 +105,6 @@ namespace RentaVideos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
-
             if (busquedas.Visible == true)
             {
               
@@ -130,6 +127,7 @@ namespace RentaVideos
         private void button2_Click_1(object sender, EventArgs e)
         {
             //  Application.Exit();
+            ConectarServidor.cerrarConexion();
             this.Hide();
             VentanaLogin looge = new VentanaLogin();
             looge.Show();
@@ -148,26 +146,6 @@ namespace RentaVideos
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
                 Util.Animate(busquedas, Util.Effect.Roll, 150, 360);
 
-                if (ocultarMenuRegistro == 1)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 2)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 3)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 4)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-                }
             }
             else if(configuraciones.Visible == true)
             {
@@ -220,32 +198,6 @@ namespace RentaVideos
             {
                 Util.Animate(registros, Util.Effect.Roll, 150, 360);
                 Util.Animate(configuraciones, Util.Effect.Roll, 150, 360);
-
-                if (ocultarMenuRegistro == 1)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 2)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 3)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-                }
-                else if (ocultarMenuRegistro == 4)
-                {
-                    ocultarMenuRegistro = 0;
-                    Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-                }
-
-
-
-
-
             }
             else if (busquedas.Visible == true)
             {
@@ -261,31 +213,9 @@ namespace RentaVideos
 
         private void btRentar_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
-
-
-            this.Hide();
-            Formularios.frmRentaVideo nuevaRenta = new Formularios.frmRentaVideo();
+            Formularios.frmRentaVideo nuevaRenta = new Formularios.frmRentaVideo(user);
             nuevaRenta.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -301,29 +231,33 @@ namespace RentaVideos
         private void btRegEmpleado_Click(object sender, EventArgs e)
         {
             //registro empleado
-            ocultarMenuRegistro = 3;
-            Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
+            this.Hide();
+            registrarEmpleado regEmpleado = new registrarEmpleado(user);
+            regEmpleado.Show();
         }
 
         private void btRegCliente_Click(object sender, EventArgs e)
         {
             //regisrto cliente
-            ocultarMenuRegistro = 2;
-            Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
+            this.Hide();
+            registrarCliente regCliente = new registrarCliente();
+            regCliente.Show();
         }
 
         private void btRegVideo_Click(object sender, EventArgs e)
         {
             //registro video
-            ocultarMenuRegistro = 1;
-            Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
+            this.Hide();
+            registrarVideo regVideo = new registrarVideo();
+            regVideo.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //registro proveedor
-            ocultarMenuRegistro = 4;
-            Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
+            this.Hide();
+            registrarProveedor regProveedor = new registrarProveedor(user);
+            regProveedor.Show();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -333,30 +267,9 @@ namespace RentaVideos
 
         private void btCotizacion_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
-
-            this.Hide();
-            Formularios.frmCotizacion nuevaCotizacion = new Formularios.frmCotizacion();
+            Formularios.frmCotizacion nuevaCotizacion = new Formularios.frmCotizacion(user);
             nuevaCotizacion.Show();
+            this.Hide();
         }
 
         private void panel2_Paint_1(object sender, PaintEventArgs e)
@@ -371,7 +284,7 @@ namespace RentaVideos
         private void button5_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            configurarProveedor cnfProveedor = new configurarProveedor();
+            configurarProveedor cnfProveedor = new configurarProveedor(user);
             cnfProveedor.Show();
         }
 
@@ -403,223 +316,107 @@ namespace RentaVideos
         private void btReportes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmReportes reporte = new frmReportes();
+            frmReportes reporte = new frmReportes(user);
             reporte.Show();
         }
 
         private void button64_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
 
         }
 
         private void button64_Click_1(object sender, EventArgs e)
         {
 
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
         }
 
         private void button63_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
+
         }
 
         private void button64_Click_2(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
+        
         }
 
         private void button65_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
+           
         }
 
         private void button66_Click(object sender, EventArgs e)
         {
-            if (ocultarMenuRegistro == 1)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroVideo, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 2)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroClientes, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 3)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroEmpleados, Util.Effect.Roll, 150, 360);
-            }
-            else if (ocultarMenuRegistro == 4)
-            {
-                ocultarMenuRegistro = 0;
-                Util.Animate(registroProveedor, Util.Effect.Roll, 150, 360);
-            }
+           
         }
 
         private void button67_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAyudaMenu help = new frmAyudaMenu();
+            frmAyudaMenu help = new frmAyudaMenu(user);
             help.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             this.Hide();
-            busquedaVideo searchVideo = new busquedaVideo();
+            busquedaVideo searchVideo = new busquedaVideo(user);
             searchVideo.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             this.Hide();
-            busquedaEmpleado searchEmpleado = new busquedaEmpleado();
+            busquedaEmpleado searchEmpleado = new busquedaEmpleado(user);
             searchEmpleado.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             this.Hide();
-            buscarCliente searchCliente= new buscarCliente();
+            buscarCliente searchCliente= new buscarCliente(user);
             searchCliente.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            busquedaProveedor searchProveedor = new busquedaProveedor();
+            busquedaProveedor searchProveedor = new busquedaProveedor(user);
             searchProveedor.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            configurarEmpleado cnfEmpleado = new configurarEmpleado();
+            configurarEmpleado cnfEmpleado = new configurarEmpleado(user);
             cnfEmpleado.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            configurarCliente cnfCliente = new configurarCliente();
+            configurarCliente cnfCliente = new configurarCliente(user);
             cnfCliente.Show();
         }
 
         private void button69_Click(object sender, EventArgs e)
         {
             this.Hide();
-            registroUsuario newUsuario = new registroUsuario();
+            registroUsuario newUsuario = new registroUsuario(user);
             newUsuario.Show();
         }
 
         private void button70_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmPrivilegios privilegio = new frmPrivilegios();
+            frmPrivilegios privilegio = new frmPrivilegios(user);
             privilegio.Show();
         }
 
         private void button68_Click(object sender, EventArgs e)
         {
             this.Hide();
-            rmDevoluciones devolucion = new rmDevoluciones();
+            rmDevoluciones devolucion = new rmDevoluciones(user);
             devolucion.Show();
         }
     }
