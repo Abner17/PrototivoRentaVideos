@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10565175-798F-4944-A3FE-70E2B79C2DA8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RentaVideos</RootNamespace>
+    <AssemblyName>RentaVideos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarCliente.Designer.cs">
+      <DependentUpon>buscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaEmpleado.Designer.cs">
+      <DependentUpon>busquedaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaProveedor.Designer.cs">
+      <DependentUpon>busquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedaVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedaVideo.Designer.cs">
+      <DependentUpon>busquedaVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs" />
+    <Compile Include="ConectarServidor.cs" />
+    <Compile Include="configurarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarCliente.Designer.cs">
+      <DependentUpon>configurarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarEmpleado.Designer.cs">
+      <DependentUpon>configurarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarProducto.Designer.cs">
+      <DependentUpon>configurarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configurarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configurarProveedor.Designer.cs">
+      <DependentUpon>configurarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCotizacion.Designer.cs">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRentaVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRentaVideo.Designer.cs">
+      <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAyudaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyudaMenu.Designer.cs">
+      <DependentUpon>frmAyudaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivilegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivilegios.Designer.cs">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuPrincipal.Designer.cs">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarCliente.Designer.cs">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarEmpleado.Designer.cs">
+      <DependentUpon>registrarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarProveedor.Designer.cs">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarVideo.Designer.cs">
+      <DependentUpon>registrarVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registroUsuario.Designer.cs">
+      <DependentUpon>registroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rmDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rmDevoluciones.Designer.cs">
+      <DependentUpon>rmDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaLogin.Designer.cs">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Video.cs" />
+    <EmbeddedResource Include="buscarCliente.resx">
+      <DependentUpon>buscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaEmpleado.resx">
+      <DependentUpon>busquedaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaProveedor.resx">
+      <DependentUpon>busquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedaVideo.resx">
+      <DependentUpon>busquedaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarCliente.resx">
+      <DependentUpon>configurarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarEmpleado.resx">
+      <DependentUpon>configurarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarProducto.resx">
+      <DependentUpon>configurarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configurarProveedor.resx">
+      <DependentUpon>configurarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCotizacion.resx">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRentaVideo.resx">
+      <DependentUpon>frmRentaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyudaMenu.resx">
+      <DependentUpon>frmAyudaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivilegios.resx">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuPrincipal.resx">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarCliente.resx">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarEmpleado.resx">
+      <DependentUpon>registrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarProveedor.resx">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarVideo.resx">
+      <DependentUpon>registrarVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registroUsuario.resx">
+      <DependentUpon>registroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rmDevoluciones.resx">
+      <DependentUpon>rmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaLogin.resx">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icoMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\barcod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\barcodew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\comprasw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\configuration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\consultaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\equis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\exitb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Delete_15px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Left_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Male_User_104px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Person_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Search_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\icons8_Search_Property_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ingresoprob.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ingresoprow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\key 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\marcas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\registrob.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\registrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\reportesd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\union.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\userw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ventasw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconLinea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconModificar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\logoBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ayudaLogin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ayudaLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\ayudaMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconoAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconoCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconNueva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconNueva2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconAgregarCompra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconEliminarCompra.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
