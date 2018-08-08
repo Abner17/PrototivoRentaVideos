@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btBusqueda = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
@@ -52,24 +52,39 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblPuesto = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tbNombre);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btBusqueda);
             this.panel1.Controls.Add(this.tbCodigo);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 575);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Image = global::RentaVideos.Properties.Resources.empleadoIcono;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Location = new System.Drawing.Point(7, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(340, 58);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "BUSQUEDA EMPLEADO";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button1
             // 
@@ -99,6 +114,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(303, 26);
             this.tbNombre.TabIndex = 49;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label2
             // 
@@ -139,6 +155,7 @@
             this.tbCodigo.Size = new System.Drawing.Size(303, 26);
             this.tbCodigo.TabIndex = 46;
             this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
+            this.tbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigo_KeyPress);
             // 
             // label1
             // 
@@ -150,18 +167,9 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "BUSCAR POR CODIGO:";
             // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(33, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(304, 31);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "BUSQUEDA EMPLEADO";
-            // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,10 +182,11 @@
             this.button2.TabIndex = 61;
             this.button2.Text = "Puesto:";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button45
             // 
+            this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button45.FlatAppearance.BorderSize = 0;
             this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -190,10 +199,11 @@
             this.button45.TabIndex = 60;
             this.button45.Text = "E-mail:";
             this.button45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button45.UseVisualStyleBackColor = true;
+            this.button45.UseVisualStyleBackColor = false;
             // 
             // button51
             // 
+            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button51.FlatAppearance.BorderSize = 0;
             this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -206,10 +216,11 @@
             this.button51.TabIndex = 57;
             this.button51.Text = "Telefono:";
             this.button51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button51.UseVisualStyleBackColor = true;
+            this.button51.UseVisualStyleBackColor = false;
             // 
             // button56
             // 
+            this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button56.FlatAppearance.BorderSize = 0;
             this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,10 +233,11 @@
             this.button56.TabIndex = 52;
             this.button56.Text = "Direccion:";
             this.button56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button56.UseVisualStyleBackColor = true;
+            this.button56.UseVisualStyleBackColor = false;
             // 
             // button57
             // 
+            this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button57.FlatAppearance.BorderSize = 0;
             this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,10 +250,11 @@
             this.button57.TabIndex = 50;
             this.button57.Text = "Apellidos:";
             this.button57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button57.UseVisualStyleBackColor = true;
+            this.button57.UseVisualStyleBackColor = false;
             // 
             // button58
             // 
+            this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button58.FlatAppearance.BorderSize = 0;
             this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -254,10 +267,11 @@
             this.button58.TabIndex = 48;
             this.button58.Text = "Nombres: ";
             this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button58.UseVisualStyleBackColor = true;
+            this.button58.UseVisualStyleBackColor = false;
             // 
             // button59
             // 
+            this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button59.FlatAppearance.BorderSize = 0;
             this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -270,18 +284,18 @@
             this.button59.TabIndex = 46;
             this.button59.Text = "Codigo:";
             this.button59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button59.UseVisualStyleBackColor = true;
+            this.button59.UseVisualStyleBackColor = false;
             // 
             // btIngresar
             // 
-            this.btIngresar.BackgroundImage = global::RentaVideos.Properties.Resources.iconNueva2;
+            this.btIngresar.BackgroundImage = global::RentaVideos.Properties.Resources.iconoLimpiar;
             this.btIngresar.FlatAppearance.BorderSize = 0;
             this.btIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.btIngresar.ForeColor = System.Drawing.Color.White;
-            this.btIngresar.Location = new System.Drawing.Point(761, 397);
+            this.btIngresar.Location = new System.Drawing.Point(779, 412);
             this.btIngresar.Name = "btIngresar";
-            this.btIngresar.Size = new System.Drawing.Size(82, 79);
+            this.btIngresar.Size = new System.Drawing.Size(64, 63);
             this.btIngresar.TabIndex = 51;
             this.btIngresar.UseVisualStyleBackColor = true;
             this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
@@ -301,6 +315,7 @@
             // 
             // lblCodigo
             // 
+            this.lblCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
             this.lblCodigo.Location = new System.Drawing.Point(603, 52);
@@ -310,6 +325,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(603, 96);
@@ -319,6 +335,7 @@
             // 
             // lblApellido
             // 
+            this.lblApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
             this.lblApellido.Location = new System.Drawing.Point(603, 141);
@@ -328,6 +345,7 @@
             // 
             // lblDireccion
             // 
+            this.lblDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.White;
             this.lblDireccion.Location = new System.Drawing.Point(603, 191);
@@ -337,6 +355,7 @@
             // 
             // lblTelefono
             // 
+            this.lblTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
             this.lblTelefono.Location = new System.Drawing.Point(603, 236);
@@ -346,6 +365,7 @@
             // 
             // lblCorreo
             // 
+            this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
             this.lblCorreo.Location = new System.Drawing.Point(603, 285);
@@ -355,12 +375,21 @@
             // 
             // lblPuesto
             // 
+            this.lblPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.White;
             this.lblPuesto.Location = new System.Drawing.Point(603, 334);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(158, 24);
             this.lblPuesto.TabIndex = 70;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(403, 21);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 370);
+            this.panel2.TabIndex = 99;
             // 
             // busquedaEmpleado
             // 
@@ -385,6 +414,7 @@
             this.Controls.Add(this.button58);
             this.Controls.Add(this.button59);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "busquedaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -406,7 +436,6 @@
         private System.Windows.Forms.Button btBusqueda;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btRegresar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button45;
@@ -422,5 +451,7 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -87,6 +87,7 @@
             this.txtMembresia.Size = new System.Drawing.Size(179, 20);
             this.txtMembresia.TabIndex = 4;
             this.txtMembresia.TextChanged += new System.EventHandler(this.txt_codCliente_TextChanged_1);
+            this.txtMembresia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMembresia_KeyPress);
             // 
             // lbl_nombreCliente
             // 
@@ -106,6 +107,7 @@
             this.txt_nombreCliente.Size = new System.Drawing.Size(179, 20);
             this.txt_nombreCliente.TabIndex = 6;
             this.txt_nombreCliente.TextChanged += new System.EventHandler(this.txt_nombreCliente_TextChanged);
+            this.txt_nombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreCliente_KeyPress);
             // 
             // lbl_fecha
             // 
@@ -147,6 +149,7 @@
             this.txt_Nit.Name = "txt_Nit";
             this.txt_Nit.Size = new System.Drawing.Size(179, 20);
             this.txt_Nit.TabIndex = 27;
+            this.txt_Nit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nit_KeyPress);
             // 
             // lbl_nit
             // 

@@ -10,12 +10,15 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace RentaVideos
 {
-    
+   
     public partial class rmDevoluciones : Form
  
     {
-        
-    string user = "";
+        public int diferencia = 0;
+        public string codigo ="";
+       
+
+        string user = "";
         public class Devoluciones 
         {
             public DateTime fechaActual { get; set; }
@@ -44,7 +47,22 @@ namespace RentaVideos
 
         private void rmDevoluciones_Load(object sender, EventArgs e)
         {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand(String.Format("Select idMembresia from Membresia"), ConectarServidor.conexion());
+                MySqlDataAdapter da = new MySqlDataAdapter(sql);
+                DataSet ds = new DataSet();
 
+                da.Fill(ds);
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    comMembresias.Items.Add(ds.Tables[0].Rows[i][0] );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -69,13 +87,18 @@ namespace RentaVideos
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
-            int i = 0;
+            const int columna = 6;
+            int suma = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                suma += (int)row.Cells[columna].Value;
+            }
+            /*int i = 0;
             int suma = 0;
             for (i =1; i< dataGridView1.RowCount;i++)
             {
-                suma = suma + int.Parse(dataGridView1.Rows[4].Cells[1].Value.ToString());
-            }
+                suma = suma + int.Parse(dataGridView1.Rows[0].Cells[6].Value.ToString());
+            }*/
         }
 
         private void button56_Click(object sender, EventArgs e)
@@ -85,37 +108,56 @@ namespace RentaVideos
 
         private void button47_Click(object sender, EventArgs e)
         {
-           int devolver ;
-
-            int codigo;
-            string nombre;
-            DateTime FecIn;
-            DateTime FecDev;
+            
+            int devolver;
+            DateTime fec1 ;
+            DateTime fec2;
+            TimeSpan calculo;
+            string box = comMembresias.SelectedItem.ToString();
+           /*box = box.Substring(0, box.IndexOf(" "));*/
 
             MySqlCommand InfDetRent = new MySqlCommand(string.Format("pd_BuscarVideoDevolucion"), ConectarServidor.conexion());
             InfDetRent.CommandType = CommandType.StoredProcedure;
 
-            InfDetRent.Parameters.AddWithValue("@NMem", textBox29.Text);
+            InfDetRent.Parameters.AddWithValue("@NMem", int.Parse(box));
             MySqlDataReader reader = InfDetRent.ExecuteReader();
 
-
-
-            codigo = int.Parse(reader.GetString(1));
-            codigo = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            nombre = reader.GetString(2);
-            nombre =  dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            FecIn = Convert.ToDateTime(reader.GetString(3));
-            FecIn = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            FecDev = Convert.ToDateTime(reader.GetString(4));
-            FecDev = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-
-           devolver = InfDetRent.ExecuteNonQuery();
             
-            /*if (dateTimePicker1 > FecDev)
+            if (reader.Read()== true)
             {
-                MessageBox.Show("El Cliente esta atrasado en la devolución");
                 
-            }*/
+               DataGridViewRow casillas = new DataGridViewRow();
+                casillas.CreateCells(dataGridView1);
+               casillas.Cells[0].Value = reader.GetString(0);
+                casillas.Cells[1].Value = reader.GetString(1);
+               casillas.Cells[2].Value = reader.GetString(2);
+                casillas.Cells[3].Value = reader.GetString(3);
+                casillas.Cells[4].Value= reader.GetDateTime(4);
+                dataGridView1.Rows.Add(casillas);
+                MySqlCommand sql1 = new MySqlCommand(String.Format("SELECT NOW()"), ConectarServidor.conexion());
+                MySqlDataReader dr1 = sql1.ExecuteReader();
+                if (dr1.Read() == true)
+                {
+                    fec1 = dr1.GetDateTime(0);
+                    textBox1.Text = Convert.ToString(fec1);
+                    fec2 = Convert.ToDateTime(casillas.Cells[4].Value = reader.GetDateTime(4));
+                    calculo = fec1 - fec2;
+                    diferencia = calculo.Days;
+                    casillas.Cells[6].Value = "Q"+"."+diferencia * 10 ;
+                    
+                }
+
+
+               
+
+
+            }
+            reader.Close();
+            
+
+            devolver = InfDetRent.ExecuteNonQuery();
+            
+        
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +167,9 @@ namespace RentaVideos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MySqlCommand RDev = new MySqlCommand(string.Format(""));
 
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -153,5 +197,7 @@ namespace RentaVideos
         {
 
         }
+        
+        
     }
 }

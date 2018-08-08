@@ -48,6 +48,7 @@ namespace RentaVideos
 
                 if (reader.Read() == true)
                 {
+                    tbCodigo.Clear();
                     lblCodigo.Text = tbCodigo.Text;
                     lblNombre.Text = reader.GetString(1);
                     lblDireccion.Text = reader.GetString(2);
@@ -85,6 +86,7 @@ namespace RentaVideos
 
                 if (reader.Read() == true)
                 {
+                    tbCodigo.Clear();
                     lblCodigo.Text = reader.GetString(0);
                     lblNombre.Text = reader.GetString(1);
                     lblDireccion.Text = reader.GetString(2);
@@ -162,6 +164,22 @@ namespace RentaVideos
         {
             this.autoCompletarNombre();
             this.autoCompletarCodigo();
+        }
+
+        private void tbCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

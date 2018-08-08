@@ -29,16 +29,30 @@
         private void InitializeComponent()
         {
             this.pnl_cotizacion = new System.Windows.Forms.Panel();
-            this.btConsulta = new System.Windows.Forms.Button();
-            this.btEnviar = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btNuevo = new System.Windows.Forms.Button();
-            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btEnviar = new System.Windows.Forms.Button();
+            this.btConsulta = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtFecha = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_nombreCliente = new System.Windows.Forms.TextBox();
+            this.lbl_nombreCliente = new System.Windows.Forms.Label();
+            this.txt_direccionCliente = new System.Windows.Forms.TextBox();
+            this.lbl_direcion = new System.Windows.Forms.Label();
+            this.lbl_telefono = new System.Windows.Forms.Label();
+            this.txtNit = new System.Windows.Forms.TextBox();
+            this.lbl_nit = new System.Windows.Forms.Label();
+            this.txt_telefonoCliente = new System.Windows.Forms.TextBox();
             this.dg_Cotizacion = new System.Windows.Forms.DataGridView();
             this.codigoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreVideoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotalCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_totalPagar = new System.Windows.Forms.Label();
             this.txt_iva = new System.Windows.Forms.TextBox();
@@ -46,6 +60,7 @@
             this.txt_totalAPagar = new System.Windows.Forms.TextBox();
             this.txt_subTotal = new System.Windows.Forms.TextBox();
             this.lbl_subTotal = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_Peliculas = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,26 +75,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button47 = new System.Windows.Forms.Button();
             this.txtMembresia = new System.Windows.Forms.TextBox();
-            this.lbl_nombreCliente = new System.Windows.Forms.Label();
-            this.txt_nombreCliente = new System.Windows.Forms.TextBox();
             this.lbl_datosCliente = new System.Windows.Forms.Label();
-            this.lbl_nit = new System.Windows.Forms.Label();
-            this.txtNit = new System.Windows.Forms.TextBox();
-            this.lbl_direcion = new System.Windows.Forms.Label();
-            this.txt_direccionCliente = new System.Windows.Forms.TextBox();
-            this.lbl_telefono = new System.Windows.Forms.Label();
-            this.txt_telefonoCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCodigoCotizacion = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.Label();
             this.lbl_codigoCotizacion = new System.Windows.Forms.Label();
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.pnl_cotizacion.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Cotizacion)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,10 +91,6 @@
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_cotizacion
@@ -107,39 +107,16 @@
             this.pnl_cotizacion.TabIndex = 0;
             this.pnl_cotizacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cotizacion_Paint);
             // 
-            // btConsulta
+            // panel8
             // 
-            this.btConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btConsulta.FlatAppearance.BorderSize = 0;
-            this.btConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsulta.ForeColor = System.Drawing.Color.White;
-            this.btConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btConsulta.Location = new System.Drawing.Point(187, 5);
-            this.btConsulta.Name = "btConsulta";
-            this.btConsulta.Size = new System.Drawing.Size(119, 40);
-            this.btConsulta.TabIndex = 93;
-            this.btConsulta.Text = "Consulta";
-            this.btConsulta.UseVisualStyleBackColor = false;
-            this.btConsulta.Click += new System.EventHandler(this.btConsulta_Click);
-            // 
-            // btEnviar
-            // 
-            this.btEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btEnviar.FlatAppearance.BorderSize = 0;
-            this.btEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEnviar.ForeColor = System.Drawing.Color.White;
-            this.btEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEnviar.Location = new System.Drawing.Point(365, 5);
-            this.btEnviar.Name = "btEnviar";
-            this.btEnviar.Size = new System.Drawing.Size(103, 40);
-            this.btEnviar.TabIndex = 92;
-            this.btEnviar.Text = "Enviar";
-            this.btEnviar.UseVisualStyleBackColor = false;
-            this.btEnviar.Click += new System.EventHandler(this.btEnviar_Click);
+            this.panel8.BackColor = System.Drawing.Color.Teal;
+            this.panel8.Controls.Add(this.btNuevo);
+            this.panel8.Controls.Add(this.btEnviar);
+            this.panel8.Controls.Add(this.btConsulta);
+            this.panel8.Location = new System.Drawing.Point(625, 48);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(487, 49);
+            this.panel8.TabIndex = 61;
             // 
             // btNuevo
             // 
@@ -158,18 +135,168 @@
             this.btNuevo.UseVisualStyleBackColor = false;
             this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
             // 
-            // btn_cerrar
+            // btEnviar
             // 
-            this.btn_cerrar.BackgroundImage = global::RentaVideos.Properties.Resources.exit;
-            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(1121, 21);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(31, 34);
-            this.btn_cerrar.TabIndex = 23;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            this.btEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btEnviar.FlatAppearance.BorderSize = 0;
+            this.btEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnviar.ForeColor = System.Drawing.Color.White;
+            this.btEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEnviar.Location = new System.Drawing.Point(365, 5);
+            this.btEnviar.Name = "btEnviar";
+            this.btEnviar.Size = new System.Drawing.Size(103, 40);
+            this.btEnviar.TabIndex = 92;
+            this.btEnviar.Text = "Enviar";
+            this.btEnviar.UseVisualStyleBackColor = false;
+            this.btEnviar.Click += new System.EventHandler(this.btEnviar_Click);
+            // 
+            // btConsulta
+            // 
+            this.btConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btConsulta.FlatAppearance.BorderSize = 0;
+            this.btConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsulta.ForeColor = System.Drawing.Color.White;
+            this.btConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btConsulta.Location = new System.Drawing.Point(187, 5);
+            this.btConsulta.Name = "btConsulta";
+            this.btConsulta.Size = new System.Drawing.Size(119, 40);
+            this.btConsulta.TabIndex = 93;
+            this.btConsulta.Text = "Consulta";
+            this.btConsulta.UseVisualStyleBackColor = false;
+            this.btConsulta.Click += new System.EventHandler(this.btConsulta_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Controls.Add(this.txtFecha);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.dg_Cotizacion);
+            this.panel6.Controls.Add(this.lbl_fecha);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Location = new System.Drawing.Point(572, 121);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(585, 497);
+            this.panel6.TabIndex = 60;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pictureBox1.Image = global::RentaVideos.Properties.Resources.logoBlanco;
+            this.pictureBox1.Location = new System.Drawing.Point(490, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 94;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.AutoSize = true;
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtFecha.Location = new System.Drawing.Point(75, 11);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(47, 13);
+            this.txtFecha.TabIndex = 5;
+            this.txtFecha.Text = "FECHA";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel7.Controls.Add(this.txt_nombreCliente);
+            this.panel7.Controls.Add(this.lbl_nombreCliente);
+            this.panel7.Controls.Add(this.txt_direccionCliente);
+            this.panel7.Controls.Add(this.lbl_direcion);
+            this.panel7.Controls.Add(this.lbl_telefono);
+            this.panel7.Controls.Add(this.txtNit);
+            this.panel7.Controls.Add(this.lbl_nit);
+            this.panel7.Controls.Add(this.txt_telefonoCliente);
+            this.panel7.Location = new System.Drawing.Point(24, 67);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(543, 86);
+            this.panel7.TabIndex = 61;
+            // 
+            // txt_nombreCliente
+            // 
+            this.txt_nombreCliente.Location = new System.Drawing.Point(120, 10);
+            this.txt_nombreCliente.Name = "txt_nombreCliente";
+            this.txt_nombreCliente.Size = new System.Drawing.Size(136, 20);
+            this.txt_nombreCliente.TabIndex = 5;
+            this.txt_nombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreCliente_KeyPress);
+            // 
+            // lbl_nombreCliente
+            // 
+            this.lbl_nombreCliente.AutoSize = true;
+            this.lbl_nombreCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_nombreCliente.Location = new System.Drawing.Point(40, 13);
+            this.lbl_nombreCliente.Name = "lbl_nombreCliente";
+            this.lbl_nombreCliente.Size = new System.Drawing.Size(60, 13);
+            this.lbl_nombreCliente.TabIndex = 7;
+            this.lbl_nombreCliente.Text = "NOMBRE :";
+            // 
+            // txt_direccionCliente
+            // 
+            this.txt_direccionCliente.Location = new System.Drawing.Point(118, 57);
+            this.txt_direccionCliente.Name = "txt_direccionCliente";
+            this.txt_direccionCliente.ReadOnly = true;
+            this.txt_direccionCliente.Size = new System.Drawing.Size(138, 20);
+            this.txt_direccionCliente.TabIndex = 11;
+            // 
+            // lbl_direcion
+            // 
+            this.lbl_direcion.AutoSize = true;
+            this.lbl_direcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_direcion.Location = new System.Drawing.Point(40, 60);
+            this.lbl_direcion.Name = "lbl_direcion";
+            this.lbl_direcion.Size = new System.Drawing.Size(72, 13);
+            this.lbl_direcion.TabIndex = 10;
+            this.lbl_direcion.Text = "DIRECCION :";
+            // 
+            // lbl_telefono
+            // 
+            this.lbl_telefono.AutoSize = true;
+            this.lbl_telefono.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_telefono.Location = new System.Drawing.Point(315, 57);
+            this.lbl_telefono.Name = "lbl_telefono";
+            this.lbl_telefono.Size = new System.Drawing.Size(70, 13);
+            this.lbl_telefono.TabIndex = 12;
+            this.lbl_telefono.Text = "TELEFONO :";
+            // 
+            // txtNit
+            // 
+            this.txtNit.Location = new System.Drawing.Point(399, 14);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.ReadOnly = true;
+            this.txtNit.Size = new System.Drawing.Size(100, 20);
+            this.txtNit.TabIndex = 9;
+            this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
+            // 
+            // lbl_nit
+            // 
+            this.lbl_nit.AutoSize = true;
+            this.lbl_nit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_nit.Location = new System.Drawing.Point(350, 17);
+            this.lbl_nit.Name = "lbl_nit";
+            this.lbl_nit.Size = new System.Drawing.Size(31, 13);
+            this.lbl_nit.TabIndex = 8;
+            this.lbl_nit.Text = "NIT :";
+            // 
+            // txt_telefonoCliente
+            // 
+            this.txt_telefonoCliente.Location = new System.Drawing.Point(400, 54);
+            this.txt_telefonoCliente.Name = "txt_telefonoCliente";
+            this.txt_telefonoCliente.ReadOnly = true;
+            this.txt_telefonoCliente.Size = new System.Drawing.Size(100, 20);
+            this.txt_telefonoCliente.TabIndex = 13;
+            this.txt_telefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefonoCliente_KeyPress);
             // 
             // dg_Cotizacion
             // 
@@ -218,6 +345,28 @@
             // 
             this.SubTotalCotizacion.HeaderText = "SubTotal";
             this.SubTotalCotizacion.Name = "SubTotalCotizacion";
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_fecha.Location = new System.Drawing.Point(21, 11);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(48, 13);
+            this.lbl_fecha.TabIndex = 2;
+            this.lbl_fecha.Text = "FECHA :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(19, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Cotizacion:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel4
             // 
@@ -288,6 +437,19 @@
             this.lbl_subTotal.Size = new System.Drawing.Size(70, 13);
             this.lbl_subTotal.TabIndex = 23;
             this.lbl_subTotal.Text = "SUBTOTAL :";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::RentaVideos.Properties.Resources.exit;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(1121, 21);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(31, 34);
+            this.btn_cerrar.TabIndex = 23;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // panel3
             // 
@@ -434,23 +596,6 @@
             this.txtMembresia.TabIndex = 14;
             this.txtMembresia.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // lbl_nombreCliente
-            // 
-            this.lbl_nombreCliente.AutoSize = true;
-            this.lbl_nombreCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_nombreCliente.Location = new System.Drawing.Point(40, 13);
-            this.lbl_nombreCliente.Name = "lbl_nombreCliente";
-            this.lbl_nombreCliente.Size = new System.Drawing.Size(60, 13);
-            this.lbl_nombreCliente.TabIndex = 7;
-            this.lbl_nombreCliente.Text = "NOMBRE :";
-            // 
-            // txt_nombreCliente
-            // 
-            this.txt_nombreCliente.Location = new System.Drawing.Point(120, 10);
-            this.txt_nombreCliente.Name = "txt_nombreCliente";
-            this.txt_nombreCliente.Size = new System.Drawing.Size(136, 20);
-            this.txt_nombreCliente.TabIndex = 5;
-            // 
             // lbl_datosCliente
             // 
             this.lbl_datosCliente.AutoSize = true;
@@ -461,60 +606,6 @@
             this.lbl_datosCliente.Size = new System.Drawing.Size(215, 24);
             this.lbl_datosCliente.TabIndex = 6;
             this.lbl_datosCliente.Text = "DATOS DEL CLIENTE  :";
-            // 
-            // lbl_nit
-            // 
-            this.lbl_nit.AutoSize = true;
-            this.lbl_nit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_nit.Location = new System.Drawing.Point(350, 17);
-            this.lbl_nit.Name = "lbl_nit";
-            this.lbl_nit.Size = new System.Drawing.Size(31, 13);
-            this.lbl_nit.TabIndex = 8;
-            this.lbl_nit.Text = "NIT :";
-            // 
-            // txtNit
-            // 
-            this.txtNit.Location = new System.Drawing.Point(399, 14);
-            this.txtNit.Name = "txtNit";
-            this.txtNit.ReadOnly = true;
-            this.txtNit.Size = new System.Drawing.Size(100, 20);
-            this.txtNit.TabIndex = 9;
-            // 
-            // lbl_direcion
-            // 
-            this.lbl_direcion.AutoSize = true;
-            this.lbl_direcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_direcion.Location = new System.Drawing.Point(40, 60);
-            this.lbl_direcion.Name = "lbl_direcion";
-            this.lbl_direcion.Size = new System.Drawing.Size(72, 13);
-            this.lbl_direcion.TabIndex = 10;
-            this.lbl_direcion.Text = "DIRECCION :";
-            // 
-            // txt_direccionCliente
-            // 
-            this.txt_direccionCliente.Location = new System.Drawing.Point(118, 57);
-            this.txt_direccionCliente.Name = "txt_direccionCliente";
-            this.txt_direccionCliente.ReadOnly = true;
-            this.txt_direccionCliente.Size = new System.Drawing.Size(138, 20);
-            this.txt_direccionCliente.TabIndex = 11;
-            // 
-            // lbl_telefono
-            // 
-            this.lbl_telefono.AutoSize = true;
-            this.lbl_telefono.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_telefono.Location = new System.Drawing.Point(315, 57);
-            this.lbl_telefono.Name = "lbl_telefono";
-            this.lbl_telefono.Size = new System.Drawing.Size(70, 13);
-            this.lbl_telefono.TabIndex = 12;
-            this.lbl_telefono.Text = "TELEFONO :";
-            // 
-            // txt_telefonoCliente
-            // 
-            this.txt_telefonoCliente.Location = new System.Drawing.Point(400, 54);
-            this.txt_telefonoCliente.Name = "txt_telefonoCliente";
-            this.txt_telefonoCliente.ReadOnly = true;
-            this.txt_telefonoCliente.Size = new System.Drawing.Size(100, 20);
-            this.txt_telefonoCliente.TabIndex = 13;
             // 
             // panel1
             // 
@@ -534,17 +625,6 @@
             this.txtCodigoCotizacion.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoCotizacion.TabIndex = 14;
             // 
-            // txtFecha
-            // 
-            this.txtFecha.AutoSize = true;
-            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtFecha.Location = new System.Drawing.Point(75, 11);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(47, 13);
-            this.txtFecha.TabIndex = 5;
-            this.txtFecha.Text = "FECHA";
-            // 
             // lbl_codigoCotizacion
             // 
             this.lbl_codigoCotizacion.AutoSize = true;
@@ -554,83 +634,6 @@
             this.lbl_codigoCotizacion.Size = new System.Drawing.Size(141, 13);
             this.lbl_codigoCotizacion.TabIndex = 1;
             this.lbl_codigoCotizacion.Text = "CODIGO DE COTIZACION :";
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_fecha.Location = new System.Drawing.Point(21, 11);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(48, 13);
-            this.lbl_fecha.TabIndex = 2;
-            this.lbl_fecha.Text = "FECHA :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(19, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Cotizacion:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Controls.Add(this.txtFecha);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.dg_Cotizacion);
-            this.panel6.Controls.Add(this.lbl_fecha);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Location = new System.Drawing.Point(572, 121);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(585, 497);
-            this.panel6.TabIndex = 60;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel7.Controls.Add(this.txt_nombreCliente);
-            this.panel7.Controls.Add(this.lbl_nombreCliente);
-            this.panel7.Controls.Add(this.txt_direccionCliente);
-            this.panel7.Controls.Add(this.lbl_direcion);
-            this.panel7.Controls.Add(this.lbl_telefono);
-            this.panel7.Controls.Add(this.txtNit);
-            this.panel7.Controls.Add(this.lbl_nit);
-            this.panel7.Controls.Add(this.txt_telefonoCliente);
-            this.panel7.Location = new System.Drawing.Point(24, 67);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(543, 86);
-            this.panel7.TabIndex = 61;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pictureBox1.Image = global::RentaVideos.Properties.Resources.logoBlanco;
-            this.pictureBox1.Location = new System.Drawing.Point(490, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 94;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Teal;
-            this.panel8.Controls.Add(this.btNuevo);
-            this.panel8.Controls.Add(this.btEnviar);
-            this.panel8.Controls.Add(this.btConsulta);
-            this.panel8.Location = new System.Drawing.Point(625, 48);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(487, 49);
-            this.panel8.TabIndex = 61;
             // 
             // frmCotizacion
             // 
@@ -644,6 +647,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCotizacion_Load);
             this.pnl_cotizacion.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Cotizacion)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -656,12 +665,6 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

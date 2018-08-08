@@ -428,5 +428,44 @@
   <ItemGroup>
     <None Include="Iconos\iconEliminarCompra.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconEmpleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconEmpleado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconEmpleado3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconCorreo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconCorreo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconCorreo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconBitacora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconBusqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\clienteIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\empleadoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\proveedorIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\videoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\iconoLimpiar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

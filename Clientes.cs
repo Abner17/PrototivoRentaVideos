@@ -54,9 +54,6 @@ namespace RentaVideos
             MySqlCommand registroCliente = new MySqlCommand(string.Format("Insert into Cliente (NIT, Nombre_Cliente, Apellido_Cliente, DPI, Direccion,Sexo, Fecha_Nacimiento) values ('{0}','{1}','{2}', '{3}','{4}','{5}','{6}')",
            pCliente.Nit, pCliente.Nombre, pCliente.Apellido, pCliente.Dpi, pCliente.Direccion, pCliente.Sexo, pCliente.Fecha_Nac), ConectarServidor.conexion());
 
-            MySqlCommand registroCorreoCliente = new MySqlCommand(string.Format("INSERT INTO `Correo_Cliente` (`Correo`, `Descripcion`, `Cliente_NIT`) VALUES  ('{0}','{1}','{2}')",
-  pCliente.Email, pCliente.descripcionEmail, pCliente.Nit), ConectarServidor.conexion());
-
             MySqlCommand registroTelefonoCliente = new MySqlCommand(string.Format("INSERT INTO `Telefono_Cliente` (`Telefono`, `Descripcion`, `Cliente_NIT`) VALUES  ('{0}','{1}','{2}')",
            pCliente.Telefono, pCliente.descripcionTelefono, pCliente.Nit), ConectarServidor.conexion());
 
@@ -66,7 +63,6 @@ namespace RentaVideos
 
 
             retorno = registroCliente.ExecuteNonQuery();
-            retorno = registroCorreoCliente.ExecuteNonQuery();
             retorno = registroTelefonoCliente.ExecuteNonQuery();
             retorno = registroMembresia.ExecuteNonQuery();
             return retorno;

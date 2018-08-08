@@ -41,6 +41,8 @@
             this.lbl_apto = new System.Windows.Forms.Label();
             this.lbl_duracion = new System.Windows.Forms.Label();
             this.pnl_datosPeliculas = new System.Windows.Forms.Panel();
+            this.lblidRenta = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtAño = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtDuracion = new System.Windows.Forms.TextBox();
@@ -48,6 +50,7 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.lbl_datosAdicionales = new System.Windows.Forms.Label();
             this.pnl_datosRenta = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_facturar = new System.Windows.Forms.Button();
             this.txt_descripcionPelicula = new System.Windows.Forms.TextBox();
             this.lbl_descripcionPelicula = new System.Windows.Forms.Label();
@@ -61,9 +64,6 @@
             this.lbl_disponible = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblidRenta = new System.Windows.Forms.Label();
             this.pnl_datosPeliculas.SuspendLayout();
             this.pnl_datosRenta.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,7 @@
             this.txt_nombrePelicula.Name = "txt_nombrePelicula";
             this.txt_nombrePelicula.Size = new System.Drawing.Size(121, 20);
             this.txt_nombrePelicula.TabIndex = 4;
+            this.txt_nombrePelicula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombrePelicula_KeyPress);
             // 
             // lbl_directorPelicula
             // 
@@ -206,6 +207,26 @@
             this.pnl_datosPeliculas.Size = new System.Drawing.Size(459, 506);
             this.pnl_datosPeliculas.TabIndex = 20;
             // 
+            // lblidRenta
+            // 
+            this.lblidRenta.AutoSize = true;
+            this.lblidRenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidRenta.ForeColor = System.Drawing.Color.White;
+            this.lblidRenta.Location = new System.Drawing.Point(141, 438);
+            this.lblidRenta.Name = "lblidRenta";
+            this.lblidRenta.Size = new System.Drawing.Size(0, 24);
+            this.lblidRenta.TabIndex = 59;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(9, 446);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "ID RENTA ACTUAL:";
+            // 
             // txtAño
             // 
             this.txtAño.Location = new System.Drawing.Point(113, 280);
@@ -288,6 +309,20 @@
             this.pnl_datosRenta.Size = new System.Drawing.Size(520, 506);
             this.pnl_datosRenta.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(221, 390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(296, 36);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "RENTAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_facturar
             // 
             this.btn_facturar.FlatAppearance.BorderSize = 0;
@@ -309,6 +344,7 @@
             this.txt_descripcionPelicula.Name = "txt_descripcionPelicula";
             this.txt_descripcionPelicula.Size = new System.Drawing.Size(341, 20);
             this.txt_descripcionPelicula.TabIndex = 11;
+            this.txt_descripcionPelicula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcionPelicula_KeyPress);
             // 
             // lbl_descripcionPelicula
             // 
@@ -412,40 +448,6 @@
             this.btn_cerrar.TabIndex = 22;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(221, 390);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 36);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "RENTAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(9, 446);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "ID RENTA ACTUAL:";
-            // 
-            // lblidRenta
-            // 
-            this.lblidRenta.AutoSize = true;
-            this.lblidRenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidRenta.ForeColor = System.Drawing.Color.White;
-            this.lblidRenta.Location = new System.Drawing.Point(141, 438);
-            this.lblidRenta.Name = "lblidRenta";
-            this.lblidRenta.Size = new System.Drawing.Size(0, 24);
-            this.lblidRenta.TabIndex = 59;
             // 
             // frmRentaVideo
             // 

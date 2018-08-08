@@ -759,5 +759,36 @@ namespace RentaVideos.Formularios{
         {
 
         }
+
+        private void txt_nombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_telefonoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Globalization;
 
 namespace RentaVideos
 {
@@ -60,7 +61,38 @@ namespace RentaVideos
                 {
                     if (reader.GetString(2) == GMD5(pass))
                     {
-                        
+                        DateTime fechaInicio = DateTime.Now;
+
+                        IPHostEntry host;
+                        string localIP = "";
+                        host = Dns.GetHostEntry(Dns.GetHostName());
+                        foreach (IPAddress ip in host.AddressList)
+                        {
+                            if (ip.AddressFamily.ToString() == "InterNetwork")
+                            {
+                                localIP = ip.ToString();
+                                Console.WriteLine(fechaInicio);
+                                Console.WriteLine(localIP);
+                            }
+                        }
+
+                        try
+                        {
+                            MySqlCommand sql = new MySqlCommand(String.Format("pd_InsertarBitacora"), ConectarServidor.conexion());
+                            sql.CommandType = CommandType.StoredProcedure;
+
+                            sql.Parameters.AddWithValue("@userr", user);
+                            sql.Parameters.AddWithValue("@fechHoraInicioSe", fechaInicio);
+                            sql.Parameters.AddWithValue("@ipp", localIP);
+
+                            sql.ExecuteNonQuery();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+
                         this.Hide();
                         menuPrincipal menu = new menuPrincipal(user);
                         menu.Show();

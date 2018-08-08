@@ -50,10 +50,9 @@ namespace RentaVideos
                 MessageBox.Show(ex.ToString());
             }
         }
-        private void configurarEmpleado_Load(object sender, EventArgs e)
-        {
-            this.autoCompletarCodigo();
 
+        public void llenarComboBox()
+        {
             try
             {
                 MySqlCommand sql = new MySqlCommand(String.Format("Select * from Puestos"), ConectarServidor.conexion());
@@ -71,7 +70,52 @@ namespace RentaVideos
                 MessageBox.Show(ex.ToString());
             }
         }
+        private void configurarEmpleado_Load(object sender, EventArgs e)
+        {
+            this.autoCompletarCodigo();
+            this.llenarComboBox();
+        }
 
+
+        public void activarCasillas()
+        {
+            txtCodigo.Enabled = false;
+            txtNombre.Enabled = true;
+            txtNombre.BackColor = Color.White;
+            txtApellido.Enabled = true;
+            txtApellido.BackColor = Color.White;
+            txtDireccion.Enabled = true;
+            txtDireccion.BackColor = Color.White;
+            txtTelefono.Enabled = true;
+            txtTelefono.BackColor = Color.White;
+            txtCorreo.Enabled = true;
+            txtCorreo.BackColor = Color.White;
+            comboBox9.Enabled = true;
+            comboBox9.BackColor = Color.White;
+        }
+
+        public void limpiarDesactivarCasillas()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Clear();
+            txtCodigo.Enabled = true;
+            txtNombre.Enabled = false;
+            txtNombre.BackColor = Color.FromArgb(192, 64, 0);
+            txtApellido.Enabled = false;
+            txtApellido.BackColor = Color.FromArgb(192, 64, 0);
+            txtDireccion.Enabled = false;
+            txtDireccion.BackColor = Color.FromArgb(192, 64, 0);
+            txtTelefono.Enabled = false;
+            txtTelefono.BackColor = Color.FromArgb(192, 64, 0);
+            txtCorreo.Enabled = false;
+            txtCorreo.BackColor = Color.FromArgb(192, 64, 0);
+            comboBox9.Enabled = false;
+            comboBox9.BackColor = Color.FromArgb(192, 64, 0);
+        }
         private void btBusqueda_Click(object sender, EventArgs e)
         {
             try
@@ -84,19 +128,7 @@ namespace RentaVideos
 
                 if (reader.Read() == true)
                 {
-                    txtCodigo.Enabled = false;
-                    txtNombre.Enabled = true;
-                    txtNombre.BackColor = Color.White; 
-                    txtApellido.Enabled = true;
-                    txtApellido.BackColor = Color.White;
-                    txtDireccion.Enabled = true;
-                    txtDireccion.BackColor = Color.White;
-                    txtTelefono.Enabled = true;
-                    txtTelefono.BackColor = Color.White;
-                    txtCorreo.Enabled = true;
-                    txtCorreo.BackColor = Color.White;
-                    comboBox9.Enabled = true;
-                    comboBox9.BackColor = Color.White;
+                    this.activarCasillas();
 
                     txtNombre.Text = reader.GetString(1);
                     txtApellido.Text = reader.GetString(2);
@@ -117,11 +149,6 @@ namespace RentaVideos
                 else
                 {
                     txtCodigo.Clear();
-                    txtNombre.Clear();
-                    txtApellido.Clear();
-                    txtDireccion.Clear();
-                    txtTelefono.Clear();
-                    txtCorreo.Clear();
                     MessageBox.Show("El Codigo que busca no se encontro.");
                 }
             }
@@ -133,25 +160,7 @@ namespace RentaVideos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
-            txtCorreo.Clear();
-            txtCodigo.Enabled = true;
-            txtNombre.Enabled = false;
-            txtNombre.BackColor = Color.FromArgb(22, 56, 59);
-            txtApellido.Enabled = false;
-            txtApellido.BackColor = Color.FromArgb(22, 56, 59);
-            txtDireccion.Enabled = false;
-            txtDireccion.BackColor = Color.FromArgb(22, 56, 59);
-            txtTelefono.Enabled = false;
-            txtTelefono.BackColor = Color.FromArgb(22, 56, 59);
-            txtCorreo.Enabled = false;
-            txtCorreo.BackColor = Color.FromArgb(22, 56, 59);
-            comboBox9.Enabled = false;
-            comboBox9.BackColor = Color.FromArgb(22, 56, 59);
+            this.limpiarDesactivarCasillas();
         }
 
         private void btIngresar_Click(object sender, EventArgs e)
@@ -179,31 +188,24 @@ namespace RentaVideos
             {
                 MessageBox.Show("NO SE PUDO REALIZAR LA CONFIGURACION!");
             }
-            txtCodigo.Clear();
-            
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
-            txtCorreo.Clear();
-
-            txtCodigo.Enabled = true;
-            txtNombre.Enabled = false;
-            txtNombre.BackColor = Color.FromArgb(22, 56, 59);
-            txtApellido.Enabled = false;
-            txtApellido.BackColor = Color.FromArgb(22, 56, 59);
-            txtDireccion.Enabled = false;
-            txtDireccion.BackColor = Color.FromArgb(22, 56, 59);
-            txtTelefono.Enabled = false;
-            txtTelefono.BackColor = Color.FromArgb(22, 56, 59);
-            txtCorreo.Enabled = false;
-            txtCorreo.BackColor = Color.FromArgb(22, 56, 59);
-            comboBox9.Enabled = false;
-            comboBox9.BackColor = Color.FromArgb(22, 56, 59);
+            this.limpiarDesactivarCasillas();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand(String.Format("pd_EliminarUsuario"), ConectarServidor.conexion());
+                sql.CommandType = CommandType.StoredProcedure;
+
+                sql.Parameters.AddWithValue("@codigo", txtCodigo.Text);
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("NO SE PUDO REALIZAR LA ELIMINACION!");
+            }
+
             try
             {
                 MySqlCommand sql = new MySqlCommand(String.Format("pd_EliminarEmpleado"), ConectarServidor.conexion());
@@ -219,26 +221,18 @@ namespace RentaVideos
                 MessageBox.Show("NO SE PUDO REALIZAR LA ELIMINACION!");
             }
 
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
-            txtCorreo.Clear();
+            this.limpiarDesactivarCasillas();
+        }
 
-            txtCodigo.Enabled = true;
-            txtNombre.Enabled = false;
-            txtNombre.BackColor = Color.FromArgb(22, 56, 59);
-            txtApellido.Enabled = false;
-            txtApellido.BackColor = Color.FromArgb(22, 56, 59);
-            txtDireccion.Enabled = false;
-            txtDireccion.BackColor = Color.FromArgb(22, 56, 59);
-            txtTelefono.Enabled = false;
-            txtTelefono.BackColor = Color.FromArgb(22, 56, 59);
-            txtCorreo.Enabled = false;
-            txtCorreo.BackColor = Color.FromArgb(22, 56, 59);
-            comboBox9.Enabled = false;
-            comboBox9.BackColor = Color.FromArgb(22, 56, 59);
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
         }
     }
 }

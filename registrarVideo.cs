@@ -14,15 +14,20 @@ namespace RentaVideos
 {
     public partial class registrarVideo : Form
     {
+        string user = ""; 
         public registrarVideo()
         {
             InitializeComponent();
         }
-
+        public registrarVideo(string user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
         private void button66_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menuPrincipal menu = new menuPrincipal();
+            menuPrincipal menu = new menuPrincipal(user);
             menu.Show();
         }
 
@@ -565,5 +570,43 @@ namespace RentaVideos
           
        
     }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea Cancelar el Registro de Video?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                menuPrincipal menu = new menuPrincipal(user);
+                menu.Show();
+            }
+        }
+
+        private void button47_Click(object sender, EventArgs e)
+        {
+            if (validacionGeneral())
+                envioDatos();
+        }
+
+        private void codigoVideo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+        private void copiasVideo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
     }
 }

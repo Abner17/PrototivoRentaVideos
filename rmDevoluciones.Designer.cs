@@ -33,10 +33,16 @@
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.button57 = new System.Windows.Forms.Button();
             this.button58 = new System.Windows.Forms.Button();
-            this.textBox29 = new System.Windows.Forms.TextBox();
             this.button59 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechadeRenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechadeDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Recargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,12 +51,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechadeRenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechadeDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Recargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comMembresias = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -119,14 +121,6 @@
             this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button58.UseVisualStyleBackColor = true;
             // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(601, 92);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(155, 20);
-            this.textBox29.TabIndex = 42;
-            this.textBox29.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
-            // 
             // button59
             // 
             this.button59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -164,16 +158,53 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.Código,
             this.Nombre,
             this.FechadeRenta,
             this.FechadeDevolucion,
+            this.Column2,
             this.Recargo});
             this.dataGridView1.Location = new System.Drawing.Point(12, 204);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 213);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 213);
             this.dataGridView1.TabIndex = 56;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Factura No.";
+            this.Column1.Name = "Column1";
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = " Código Pelicula";
+            this.Código.Name = "Código";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = " Nombre Pelicula";
+            this.Nombre.Name = "Nombre";
+            // 
+            // FechadeRenta
+            // 
+            this.FechadeRenta.HeaderText = "Fecha de Renta";
+            this.FechadeRenta.Name = "FechadeRenta";
+            // 
+            // FechadeDevolucion
+            // 
+            this.FechadeDevolucion.HeaderText = "Fecha de Devolución";
+            this.FechadeDevolucion.Name = "FechadeDevolucion";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Estado Alquiler";
+            this.Column2.Name = "Column2";
+            // 
+            // Recargo
+            // 
+            this.Recargo.HeaderText = "Recargo";
+            this.Recargo.Name = "Recargo";
             // 
             // button2
             // 
@@ -198,7 +229,7 @@
             this.panel1.Controls.Add(this.button57);
             this.panel1.Controls.Add(this.button58);
             this.panel1.Controls.Add(this.textBox27);
-            this.panel1.Location = new System.Drawing.Point(620, 215);
+            this.panel1.Location = new System.Drawing.Point(778, 204);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 202);
             this.panel1.TabIndex = 58;
@@ -296,46 +327,29 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dateTimePicker1
+            // comMembresias
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(837, 148);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 65;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.comMembresias.FormattingEnabled = true;
+            this.comMembresias.Location = new System.Drawing.Point(585, 92);
+            this.comMembresias.Name = "comMembresias";
+            this.comMembresias.Size = new System.Drawing.Size(203, 21);
+            this.comMembresias.TabIndex = 66;
             // 
-            // Código
+            // textBox1
             // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // FechadeRenta
-            // 
-            this.FechadeRenta.HeaderText = "Fecha de Renta";
-            this.FechadeRenta.Name = "FechadeRenta";
-            // 
-            // FechadeDevolucion
-            // 
-            this.FechadeDevolucion.HeaderText = "Fecha de Devolución";
-            this.FechadeDevolucion.Name = "FechadeDevolucion";
-            // 
-            // Recargo
-            // 
-            this.Recargo.HeaderText = "Recargo";
-            this.Recargo.Name = "Recargo";
+            this.textBox1.Location = new System.Drawing.Point(869, 141);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
+            this.textBox1.TabIndex = 67;
             // 
             // rmDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(56)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1077, 512);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1182, 517);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comMembresias);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel2);
@@ -343,7 +357,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button47);
-            this.Controls.Add(this.textBox29);
             this.Controls.Add(this.button59);
             this.Controls.Add(this.btRegresar);
             this.Controls.Add(this.label4);
@@ -368,7 +381,6 @@
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Button button57;
         private System.Windows.Forms.Button button58;
-        private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.Button button59;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -380,11 +392,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechadeRenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechadeDevolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Recargo;
+        private System.Windows.Forms.ComboBox comMembresias;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

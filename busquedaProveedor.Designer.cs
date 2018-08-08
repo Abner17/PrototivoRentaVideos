@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btBusqueda = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btRegresar = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
@@ -48,24 +48,39 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tbNombre);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btBusqueda);
             this.panel1.Controls.Add(this.tbCodigo);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 576);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(146)))), ((int)(((byte)(153)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Image = global::RentaVideos.Properties.Resources.proveedorIcono;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(1, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(379, 58);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "BUSQUEDA PROVEEDOR";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button1
             // 
@@ -94,6 +109,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(303, 26);
             this.tbNombre.TabIndex = 58;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label2
             // 
@@ -132,6 +148,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(303, 26);
             this.tbCodigo.TabIndex = 55;
+            this.tbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigo_KeyPress);
             // 
             // label1
             // 
@@ -142,16 +159,6 @@
             this.label1.Size = new System.Drawing.Size(235, 29);
             this.label1.TabIndex = 54;
             this.label1.Text = "BUSCAR POR CODIGO:";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(30, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(324, 31);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "BUSQUEDA PROVEEDOR";
             // 
             // btRegresar
             // 
@@ -168,6 +175,7 @@
             // 
             // button40
             // 
+            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button40.FlatAppearance.BorderSize = 0;
             this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -180,10 +188,11 @@
             this.button40.TabIndex = 61;
             this.button40.Text = "E-mail:";
             this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button40.UseVisualStyleBackColor = true;
+            this.button40.UseVisualStyleBackColor = false;
             // 
             // button34
             // 
+            this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button34.FlatAppearance.BorderSize = 0;
             this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,10 +205,11 @@
             this.button34.TabIndex = 49;
             this.button34.Text = "Teléfono:";
             this.button34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button34.UseVisualStyleBackColor = true;
+            this.button34.UseVisualStyleBackColor = false;
             // 
             // button35
             // 
+            this.button35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button35.FlatAppearance.BorderSize = 0;
             this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,10 +222,11 @@
             this.button35.TabIndex = 47;
             this.button35.Text = "Dirección: ";
             this.button35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button35.UseVisualStyleBackColor = true;
+            this.button35.UseVisualStyleBackColor = false;
             // 
             // button37
             // 
+            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button37.FlatAppearance.BorderSize = 0;
             this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -228,10 +239,11 @@
             this.button37.TabIndex = 43;
             this.button37.Text = "Nombre: ";
             this.button37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button37.UseVisualStyleBackColor = true;
+            this.button37.UseVisualStyleBackColor = false;
             // 
             // button38
             // 
+            this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button38.FlatAppearance.BorderSize = 0;
             this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,24 +256,25 @@
             this.button38.TabIndex = 41;
             this.button38.Text = "Código:";
             this.button38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button38.UseVisualStyleBackColor = true;
+            this.button38.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::RentaVideos.Properties.Resources.iconNueva2;
+            this.button2.BackgroundImage = global::RentaVideos.Properties.Resources.iconoLimpiar;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(740, 309);
+            this.button2.Location = new System.Drawing.Point(759, 339);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 79);
+            this.button2.Size = new System.Drawing.Size(63, 63);
             this.button2.TabIndex = 66;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblCodigo
             // 
+            this.lblCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
             this.lblCodigo.Location = new System.Drawing.Point(604, 64);
@@ -271,6 +284,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(602, 105);
@@ -280,6 +294,7 @@
             // 
             // lblDireccion
             // 
+            this.lblDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.White;
             this.lblDireccion.Location = new System.Drawing.Point(604, 151);
@@ -289,6 +304,7 @@
             // 
             // lblTelefono
             // 
+            this.lblTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
             this.lblTelefono.Location = new System.Drawing.Point(602, 198);
@@ -298,6 +314,7 @@
             // 
             // lblCorreo
             // 
+            this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
             this.lblCorreo.Location = new System.Drawing.Point(604, 249);
@@ -305,12 +322,20 @@
             this.lblCorreo.Size = new System.Drawing.Size(154, 24);
             this.lblCorreo.TabIndex = 71;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(426, 33);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(347, 284);
+            this.panel2.TabIndex = 83;
+            // 
             // busquedaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(56)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(886, 430);
+            this.ClientSize = new System.Drawing.Size(849, 430);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblDireccion);
@@ -324,6 +349,7 @@
             this.Controls.Add(this.button37);
             this.Controls.Add(this.button38);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "busquedaProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -344,7 +370,6 @@
         private System.Windows.Forms.Button btBusqueda;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btRegresar;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Button button34;
@@ -357,5 +382,7 @@
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
     }
 }

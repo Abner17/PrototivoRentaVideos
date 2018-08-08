@@ -155,7 +155,7 @@ namespace RentaVideos
                 cbRegistro.Checked = false;
                 cbBusqueda.Checked = false;
                 cbDevoluciones.Checked = false;
-                cbRegUsuario.Checked = false;
+                cbBitacora.Checked = false;
                 cbConfiguraciones.Checked = false;
             }
             else
@@ -189,10 +189,10 @@ namespace RentaVideos
                 else
                     sql.Parameters.AddWithValue("@devoluciones", false);
 
-                if (cbRegUsuario.Checked)
-                    sql.Parameters.AddWithValue("@registroUsuario", true);
+                if (cbBitacora.Checked)
+                    sql.Parameters.AddWithValue("@bitacora", true);
                 else
-                    sql.Parameters.AddWithValue("@registroUsuario", false);
+                    sql.Parameters.AddWithValue("@bitacora", false);
 
                 if (cbConfiguraciones.Checked)
                     sql.Parameters.AddWithValue("@configuraciones", true);
@@ -209,7 +209,7 @@ namespace RentaVideos
                 cbRegistro.Checked = false;
                 cbBusqueda.Checked = false;
                 cbDevoluciones.Checked = false;
-                cbRegUsuario.Checked = false;
+                cbBitacora.Checked = false;
                 cbConfiguraciones.Checked = false;
             }
         }
@@ -221,6 +221,27 @@ namespace RentaVideos
                 this.Hide();
                 menuPrincipal menu = new menuPrincipal();
                 menu.Show();
+            }
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
             }
         }
     }

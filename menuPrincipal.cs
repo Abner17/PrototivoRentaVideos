@@ -35,7 +35,7 @@ namespace RentaVideos
                 btRegistro.Enabled = reader.GetBoolean(6);
                 btBusqueda.Enabled = reader.GetBoolean(7);
                 btDevoluciones.Enabled = reader.GetBoolean(8);
-                btRegistroUsuario.Enabled = reader.GetBoolean(9);
+                btBitacora.Enabled = reader.GetBoolean(9);
                 btConfiguracion.Enabled = reader.GetBoolean(10);
                 this.user = user;
             }
@@ -130,7 +130,33 @@ namespace RentaVideos
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //  Application.Exit();
+            DateTime fechaFin = DateTime.Now;
+            string codigo = "";
+            try
+            {
+                MySqlCommand sql = new MySqlCommand(String.Format("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='bitacora'"), ConectarServidor.conexion());
+                MySqlDataReader dr = sql.ExecuteReader();
+                if (dr.Read() == true)
+                {
+                    codigo = dr.GetString(0);
+                }
+                dr.Close();
+                int cod = int.Parse(codigo) - 1;
+                Console.WriteLine(fechaFin.ToString());
+                Console.WriteLine(cod);
+                MySqlCommand sql2 = new MySqlCommand(String.Format("pd_ModificarBitacora"), ConectarServidor.conexion());
+                sql2.CommandType = CommandType.StoredProcedure;
+
+                sql2.Parameters.AddWithValue("@cod", cod.ToString());
+                sql2.Parameters.AddWithValue("@fechHoraFinSe", fechaFin);
+
+                sql2.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             ConectarServidor.cerrarConexion();
             this.Hide();
             VentanaLogin log = new VentanaLogin();
@@ -217,8 +243,8 @@ namespace RentaVideos
 
         private void btRentar_Click(object sender, EventArgs e)
         {
-            Formularios.frmRentaVideo nuevaRenta = new Formularios.frmRentaVideo(user);
-            nuevaRenta.Show();
+            Formularios.frmFactura factura = new Formularios.frmFactura(user);
+            factura.Show();
             this.Hide();
         }
 
@@ -244,7 +270,7 @@ namespace RentaVideos
         {
             //regisrto cliente
             this.Hide();
-            registrarCliente regCliente = new registrarCliente();
+            registrarCliente regCliente = new registrarCliente(user);
             regCliente.Show();
         }
 
@@ -252,7 +278,7 @@ namespace RentaVideos
         {
             //registro video
             this.Hide();
-            registrarVideo regVideo = new registrarVideo();
+            registrarVideo regVideo = new registrarVideo(user);
             regVideo.Show();
         }
 
@@ -427,6 +453,14 @@ namespace RentaVideos
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.hora = DateTime.Now.ToShortTimeString();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            registroUsuario newUsuario = new registroUsuario(user);
+            newUsuario.Show();
         }
     }
 }

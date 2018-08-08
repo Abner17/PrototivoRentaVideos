@@ -25,6 +25,7 @@ namespace RentaVideos.Formularios
         }
         public void autocompletarcodigo()
         {
+
             try
             {
                 MySqlCommand sql = new MySqlCommand(String.Format("Select idMembresia from Membresia"), ConectarServidor.conexion());
@@ -275,6 +276,40 @@ namespace RentaVideos.Formularios
         private void button3_Click(object sender, EventArgs e)
         {
             dgv_Peliculas.Rows.Remove(dgv_Peliculas.CurrentRow);
+        }
+
+        private void txt_nombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+        private void txt_Nit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+        private void txtMembresia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo debes ingresar letras en un nombre", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
         }
     }
 }
